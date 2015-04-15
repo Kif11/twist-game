@@ -52,12 +52,6 @@ public class BulletBehaviour : MonoBehaviour
 		this.transform.Translate(this.transform.forward * speed * Time.deltaTime, Space.World);
 	}
 
-	void OnDrawGizmos() {
-		Gizmos.color = Color.red;
-		Vector3 direction = player.transform.position;
-		Gizmos.DrawRay(transform.position, direction);
-	}
-
 	void OnTriggerEnter (Collider other)
 	{
 		switch (whoseBullet)

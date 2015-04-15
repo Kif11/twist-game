@@ -3,6 +3,9 @@ using System.Collections;
 // Young Chu
 // Behaviour class for BASIC enemies
 
+//TODO: Instead of exposing BuletPrefab and Enemy Bulet class parameters as public
+// need to require them. It is anoing to specify them every time in the editor.
+
 public class EnemyBehaviourClass : MonoBehaviour 
 {
 	
