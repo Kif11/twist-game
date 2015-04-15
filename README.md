@@ -1,4 +1,4 @@
-Description 
+#Description 
 “The world doesn’t revolve around you,” well, in Game Title, it actually does! Game Title is a 2.5D action puzzler where the player progresses through the game by rotating entire levels around their self while they fight enemies with a variety of weapons, using the depth of the level to their advantage.
 List of Mechanics/Features
 Rotating levels around the player
