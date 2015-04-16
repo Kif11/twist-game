@@ -4,21 +4,28 @@ using System.Collections;
 public class Portal : MonoBehaviour {
 
 	public GameObject otherPortal;
-	public bool rightPortal;
 	
-	private int dropDirection;
+	private bool teleporting = false;
+	public int direction = 1;
 
 	void OnTriggerEnter(Collider other) 
 	{
-		if (rightPortal)
-			dropDirection = 1;
-		else
-			dropDirection = -1;
 	
-		if (other.tag == "Player") 
+		if (other.tag == "Player")
 		{
-			other.transform.position = otherPortal.transform.position + otherPortal.transform.right * dropDirection;
+			Debug.Log (otherPortal.transform.position);
+			Debug.Log (otherPortal.transform.right);
+			if (!teleporting)
+				StartCoroutine(teleport(other));
 		}
 		
+	}
+	
+	IEnumerator teleport (Collider other)
+	{
+		teleporting = true;
+		other.transform.position = otherPortal.transform.position + otherPortal.transform.right * direction;
+		yield return new WaitForSeconds(1f);
+		teleporting = false;
 	}
 }
