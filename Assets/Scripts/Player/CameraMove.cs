@@ -3,6 +3,8 @@ using System.Collections;
 
 public class CameraMove : MonoBehaviour
 {
+	private Transform spawnPoint;
+
 	public float smooth = 1.5f;         // The relative speed at which the camera will catch up.
 	
 	
@@ -10,7 +12,13 @@ public class CameraMove : MonoBehaviour
 	private Vector3 relCameraPos;       // The relative position of the camera from the player.
 	private float relCameraPosMag;      // The distance of the camera from the player.
 	private Vector3 newPos;             // The position the camera is trying to reach.
-	
+
+
+	void Start()
+	{
+		spawnPoint = GameObject.FindGameObjectWithTag ("Respawn").transform;
+		player.position = spawnPoint.position;
+	}
 	
 	void Awake ()
 	{

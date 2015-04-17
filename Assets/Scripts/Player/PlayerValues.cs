@@ -5,7 +5,7 @@ using System.Collections;
 
 public class PlayerValues : MonoBehaviour 
 {
-	private static PlayerValues _instanceTwo;
+	private static PlayerValues _instance;
 
 	// maximum health player can have
 	[SerializeField]
@@ -32,9 +32,25 @@ public class PlayerValues : MonoBehaviour
 
 	void Awake ()
 	{
-		if(_instanceTwo == null)
+		if(_instance == null)
 		{
-			_instanceTwo = this;
+			_instance = this;
+			// Stops this object from being destroyed when loading scenes
+			DontDestroyOnLoad(_instance.gameObject);
+		}
+	}
+
+	// A just in case for when this instance is actually called to make sure that there is something assigned to instance var
+	public static PlayerValues instance
+	{
+		get
+		{
+			if(_instance == null)
+			{
+				_instance = GameObject.FindObjectOfType<PlayerValues>();
+			}
+			
+			return _instance;
 		}
 	}
 
@@ -151,18 +167,11 @@ public class PlayerValues : MonoBehaviour
 		}
 	}
 
-
-	public static PlayerValues instanceTwo
+	// loading next scene
+	public IEnumerator LoadNextScene(string name, float waitTime) // function parameters...name of scene, how long until we load
 	{
-		get
-		{
-			if(_instanceTwo == null)
-			{
-				_instanceTwo = GameObject.FindObjectOfType<PlayerValues>();
-			}
-			
-			return _instanceTwo;
-		}
+		yield return new WaitForSeconds(waitTime); 
+		Application.LoadLevel(name); 
 	}
 }
 
