@@ -25,6 +25,8 @@ public class PlayerValues : MonoBehaviour
 	[SerializeField]
 	private float healthDmgMultiplier = 2f;
 
+	public bool isTeleporting = false;
+
 	void Reset()
 	{
 		_health = 100f;
