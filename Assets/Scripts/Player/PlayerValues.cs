@@ -3,6 +3,7 @@ using System.Collections;
 // Young Chu
 // Script handling health and armor values of player
 
+// TODO: Remove armor function
 public class PlayerValues : MonoBehaviour 
 {
 	private static PlayerValues _instance;

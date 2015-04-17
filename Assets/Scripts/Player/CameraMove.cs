@@ -13,7 +13,7 @@ public class CameraMove : MonoBehaviour
 	private float relCameraPosMag;      // The distance of the camera from the player.
 	private Vector3 newPos;             // The position the camera is trying to reach.
 
-
+	// TODO: remove respawn transform, just spawn player on 0,0,0
 	void Start()
 	{
 		spawnPoint = GameObject.FindGameObjectWithTag ("Respawn").transform;
