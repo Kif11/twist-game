@@ -25,7 +25,7 @@ public class Collectable : MonoBehaviour {
 			if(this.tag == "Quest")
 			{
 				Debug.Log ("Objective complete, changing levels soon.");
-				StartCoroutine(singleton.LoadNextScene("level_02", 2f)); 
+				StartCoroutine(singleton.LoadNextScene("level_02", 0.2f)); 
 			}
 		}
 	}
