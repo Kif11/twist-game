@@ -3461,6 +3461,10 @@ Prefab:
       propertyPath: otherPortal
       value: 
       objectReference: {fileID: 1128544077}
+    - target: {fileID: 8148028, guid: 68b21da013e916045b05433dad78db7d, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 68b21da013e916045b05433dad78db7d, type: 2}
   m_RootGameObject: {fileID: 512099001}
@@ -5397,6 +5401,10 @@ Prefab:
       propertyPath: otherPortal
       value: 
       objectReference: {fileID: 512099001}
+    - target: {fileID: 8106238, guid: 2a96db296816a1145bad4d1e212eeb90, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2a96db296816a1145bad4d1e212eeb90, type: 2}
   m_RootGameObject: {fileID: 690669211}
@@ -8413,7 +8421,7 @@ AudioListener:
     type: 2}
   m_PrefabInternal: {fileID: 929896031}
   m_GameObject: {fileID: 1990916607}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!92 &1990916609
 Behaviour:
   m_ObjectHideFlags: 0
@@ -8701,7 +8709,7 @@ AudioListener:
     type: 2}
   m_PrefabInternal: {fileID: 1287882554}
   m_GameObject: {fileID: 2030071507}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!92 &2030071510
 Behaviour:
   m_ObjectHideFlags: 0
