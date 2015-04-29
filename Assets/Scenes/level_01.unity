@@ -87,7 +87,7 @@ GameObject:
   - 23: {fileID: 10310905}
   m_Layer: 0
   m_Name: env_wall_block
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -159,7 +159,7 @@ GameObject:
   - 23: {fileID: 12397050}
   m_Layer: 0
   m_Name: env_wall_block
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -257,6 +257,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 49
       objectReference: {fileID: 0}
+    - target: {fileID: 109430, guid: d87febd10aecd184d8a00c591a315002, type: 2}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d87febd10aecd184d8a00c591a315002, type: 2}
   m_RootGameObject: {fileID: 151551037}
@@ -275,7 +279,7 @@ GameObject:
   - 23: {fileID: 83662373}
   m_Layer: 0
   m_Name: env_wall_block
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -373,6 +377,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 18
       objectReference: {fileID: 0}
+    - target: {fileID: 109430, guid: d87febd10aecd184d8a00c591a315002, type: 2}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d87febd10aecd184d8a00c591a315002, type: 2}
   m_RootGameObject: {fileID: 1827768462}
@@ -416,6 +424,10 @@ Prefab:
     - target: {fileID: 409430, guid: d87febd10aecd184d8a00c591a315002, type: 2}
       propertyPath: m_RootOrder
       value: 51
+      objectReference: {fileID: 0}
+    - target: {fileID: 109430, guid: d87febd10aecd184d8a00c591a315002, type: 2}
+      propertyPath: m_TagString
+      value: Terrain
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d87febd10aecd184d8a00c591a315002, type: 2}
@@ -461,6 +473,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 35
       objectReference: {fileID: 0}
+    - target: {fileID: 109430, guid: d87febd10aecd184d8a00c591a315002, type: 2}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d87febd10aecd184d8a00c591a315002, type: 2}
   m_RootGameObject: {fileID: 2088448511}
@@ -504,6 +520,10 @@ Prefab:
     - target: {fileID: 409430, guid: d87febd10aecd184d8a00c591a315002, type: 2}
       propertyPath: m_RootOrder
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 109430, guid: d87febd10aecd184d8a00c591a315002, type: 2}
+      propertyPath: m_TagString
+      value: Terrain
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d87febd10aecd184d8a00c591a315002, type: 2}
@@ -711,7 +731,7 @@ GameObject:
   - 23: {fileID: 144782381}
   m_Layer: 0
   m_Name: env_wall_block
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -783,7 +803,7 @@ GameObject:
   - 23: {fileID: 151551039}
   m_Layer: 0
   m_Name: env_wall_block
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -969,7 +989,7 @@ GameObject:
   - 23: {fileID: 187819824}
   m_Layer: 0
   m_Name: env_wall_block
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1041,7 +1061,7 @@ GameObject:
   - 23: {fileID: 197466260}
   m_Layer: 0
   m_Name: env_wall_block
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1205,7 +1225,7 @@ GameObject:
   - 23: {fileID: 219896531}
   m_Layer: 0
   m_Name: env_wall_block
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1277,7 +1297,7 @@ GameObject:
   - 23: {fileID: 248281498}
   m_Layer: 0
   m_Name: env_wall_block
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1349,7 +1369,7 @@ GameObject:
   - 23: {fileID: 253156936}
   m_Layer: 0
   m_Name: env_wall_block
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1447,6 +1467,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 60
       objectReference: {fileID: 0}
+    - target: {fileID: 109430, guid: d87febd10aecd184d8a00c591a315002, type: 2}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d87febd10aecd184d8a00c591a315002, type: 2}
   m_RootGameObject: {fileID: 1758853945}
@@ -1490,6 +1514,10 @@ Prefab:
     - target: {fileID: 409430, guid: d87febd10aecd184d8a00c591a315002, type: 2}
       propertyPath: m_RootOrder
       value: 58
+      objectReference: {fileID: 0}
+    - target: {fileID: 109430, guid: d87febd10aecd184d8a00c591a315002, type: 2}
+      propertyPath: m_TagString
+      value: Terrain
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d87febd10aecd184d8a00c591a315002, type: 2}
@@ -1535,6 +1563,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 35
       objectReference: {fileID: 0}
+    - target: {fileID: 109430, guid: d87febd10aecd184d8a00c591a315002, type: 2}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d87febd10aecd184d8a00c591a315002, type: 2}
   m_RootGameObject: {fileID: 727785843}
@@ -1579,6 +1611,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 44
       objectReference: {fileID: 0}
+    - target: {fileID: 109430, guid: d87febd10aecd184d8a00c591a315002, type: 2}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d87febd10aecd184d8a00c591a315002, type: 2}
   m_RootGameObject: {fileID: 1829962409}
@@ -1597,7 +1633,7 @@ GameObject:
   - 23: {fileID: 356450575}
   m_Layer: 0
   m_Name: env_wall_block
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1769,6 +1805,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 37
       objectReference: {fileID: 0}
+    - target: {fileID: 109430, guid: d87febd10aecd184d8a00c591a315002, type: 2}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d87febd10aecd184d8a00c591a315002, type: 2}
   m_RootGameObject: {fileID: 2042783288}
@@ -1831,7 +1871,7 @@ GameObject:
   - 23: {fileID: 378992133}
   m_Layer: 0
   m_Name: env_wall_block
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1929,6 +1969,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 17
       objectReference: {fileID: 0}
+    - target: {fileID: 109430, guid: d87febd10aecd184d8a00c591a315002, type: 2}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d87febd10aecd184d8a00c591a315002, type: 2}
   m_RootGameObject: {fileID: 1766312153}
@@ -1977,7 +2021,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2242f4f320fae0439c2b0b7205a88f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthGain: 10
 --- !u!23 &391177328
 Renderer:
   m_ObjectHideFlags: 0
@@ -2056,6 +2099,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 109430, guid: d87febd10aecd184d8a00c591a315002, type: 2}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d87febd10aecd184d8a00c591a315002, type: 2}
   m_RootGameObject: {fileID: 356450573}
@@ -2074,7 +2121,7 @@ GameObject:
   - 23: {fileID: 445804349}
   m_Layer: 0
   m_Name: env_wall_block
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2228,7 +2275,7 @@ GameObject:
   - 23: {fileID: 505847461}
   m_Layer: 0
   m_Name: env_wall_block
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2413,6 +2460,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 56
       objectReference: {fileID: 0}
+    - target: {fileID: 109430, guid: d87febd10aecd184d8a00c591a315002, type: 2}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d87febd10aecd184d8a00c591a315002, type: 2}
   m_RootGameObject: {fileID: 505847459}
@@ -2456,6 +2507,10 @@ Prefab:
     - target: {fileID: 409430, guid: d87febd10aecd184d8a00c591a315002, type: 2}
       propertyPath: m_RootOrder
       value: 43
+      objectReference: {fileID: 0}
+    - target: {fileID: 109430, guid: d87febd10aecd184d8a00c591a315002, type: 2}
+      propertyPath: m_TagString
+      value: Terrain
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d87febd10aecd184d8a00c591a315002, type: 2}
@@ -2501,6 +2556,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 27
       objectReference: {fileID: 0}
+    - target: {fileID: 109430, guid: d87febd10aecd184d8a00c591a315002, type: 2}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d87febd10aecd184d8a00c591a315002, type: 2}
   m_RootGameObject: {fileID: 1516464521}
@@ -2544,6 +2603,10 @@ Prefab:
     - target: {fileID: 409430, guid: d87febd10aecd184d8a00c591a315002, type: 2}
       propertyPath: m_RootOrder
       value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 109430, guid: d87febd10aecd184d8a00c591a315002, type: 2}
+      propertyPath: m_TagString
+      value: Terrain
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d87febd10aecd184d8a00c591a315002, type: 2}
@@ -2589,6 +2652,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 109430, guid: d87febd10aecd184d8a00c591a315002, type: 2}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d87febd10aecd184d8a00c591a315002, type: 2}
   m_RootGameObject: {fileID: 1887758632}
@@ -2607,7 +2674,7 @@ GameObject:
   - 23: {fileID: 638022976}
   m_Layer: 0
   m_Name: env_wall_block
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2679,7 +2746,7 @@ GameObject:
   - 23: {fileID: 688501585}
   m_Layer: 0
   m_Name: env_wall_block
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2751,7 +2818,7 @@ GameObject:
   - 23: {fileID: 689092452}
   m_Layer: 0
   m_Name: env_wall_block
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2910,7 +2977,7 @@ GameObject:
   - 23: {fileID: 717296148}
   m_Layer: 0
   m_Name: env_wall_block
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3008,6 +3075,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 109430, guid: d87febd10aecd184d8a00c591a315002, type: 2}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d87febd10aecd184d8a00c591a315002, type: 2}
   m_RootGameObject: {fileID: 1580417338}
@@ -3052,6 +3123,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 57
       objectReference: {fileID: 0}
+    - target: {fileID: 109430, guid: d87febd10aecd184d8a00c591a315002, type: 2}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d87febd10aecd184d8a00c591a315002, type: 2}
   m_RootGameObject: {fileID: 1612986876}
@@ -3070,7 +3145,7 @@ GameObject:
   - 23: {fileID: 727785845}
   m_Layer: 0
   m_Name: env_wall_block
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3168,6 +3243,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 51
       objectReference: {fileID: 0}
+    - target: {fileID: 109430, guid: d87febd10aecd184d8a00c591a315002, type: 2}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d87febd10aecd184d8a00c591a315002, type: 2}
   m_RootGameObject: {fileID: 12397048}
@@ -3211,6 +3290,10 @@ Prefab:
     - target: {fileID: 409430, guid: d87febd10aecd184d8a00c591a315002, type: 2}
       propertyPath: m_RootOrder
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 109430, guid: d87febd10aecd184d8a00c591a315002, type: 2}
+      propertyPath: m_TagString
+      value: Terrain
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d87febd10aecd184d8a00c591a315002, type: 2}
@@ -3256,6 +3339,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 109430, guid: d87febd10aecd184d8a00c591a315002, type: 2}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d87febd10aecd184d8a00c591a315002, type: 2}
   m_RootGameObject: {fileID: 1094771976}
@@ -3299,6 +3386,10 @@ Prefab:
     - target: {fileID: 409430, guid: d87febd10aecd184d8a00c591a315002, type: 2}
       propertyPath: m_RootOrder
       value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 109430, guid: d87febd10aecd184d8a00c591a315002, type: 2}
+      propertyPath: m_TagString
+      value: Terrain
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d87febd10aecd184d8a00c591a315002, type: 2}
@@ -3344,6 +3435,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 38
       objectReference: {fileID: 0}
+    - target: {fileID: 109430, guid: d87febd10aecd184d8a00c591a315002, type: 2}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d87febd10aecd184d8a00c591a315002, type: 2}
   m_RootGameObject: {fileID: 1693532859}
@@ -3388,6 +3483,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 109430, guid: d87febd10aecd184d8a00c591a315002, type: 2}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d87febd10aecd184d8a00c591a315002, type: 2}
   m_RootGameObject: {fileID: 1038085242}
@@ -3431,6 +3530,10 @@ Prefab:
     - target: {fileID: 409430, guid: d87febd10aecd184d8a00c591a315002, type: 2}
       propertyPath: m_RootOrder
       value: 39
+      objectReference: {fileID: 0}
+    - target: {fileID: 109430, guid: d87febd10aecd184d8a00c591a315002, type: 2}
+      propertyPath: m_TagString
+      value: Terrain
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d87febd10aecd184d8a00c591a315002, type: 2}
@@ -3585,6 +3688,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 41
       objectReference: {fileID: 0}
+    - target: {fileID: 109430, guid: d87febd10aecd184d8a00c591a315002, type: 2}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d87febd10aecd184d8a00c591a315002, type: 2}
   m_RootGameObject: {fileID: 2017662327}
@@ -3681,6 +3788,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 59
       objectReference: {fileID: 0}
+    - target: {fileID: 109430, guid: d87febd10aecd184d8a00c591a315002, type: 2}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d87febd10aecd184d8a00c591a315002, type: 2}
   m_RootGameObject: {fileID: 248281496}
@@ -3699,7 +3810,7 @@ GameObject:
   - 23: {fileID: 958021724}
   m_Layer: 0
   m_Name: env_wall_block
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3771,7 +3882,7 @@ GameObject:
   - 23: {fileID: 958032761}
   m_Layer: 0
   m_Name: env_wall_block
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3869,6 +3980,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 23
       objectReference: {fileID: 0}
+    - target: {fileID: 109430, guid: d87febd10aecd184d8a00c591a315002, type: 2}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d87febd10aecd184d8a00c591a315002, type: 2}
   m_RootGameObject: {fileID: 958032759}
@@ -3913,6 +4028,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 48
       objectReference: {fileID: 0}
+    - target: {fileID: 109430, guid: d87febd10aecd184d8a00c591a315002, type: 2}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d87febd10aecd184d8a00c591a315002, type: 2}
   m_RootGameObject: {fileID: 445804347}
@@ -3931,7 +4050,7 @@ GameObject:
   - 23: {fileID: 1005318547}
   m_Layer: 0
   m_Name: env_wall_block
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4069,7 +4188,7 @@ GameObject:
   - 23: {fileID: 1029193219}
   m_Layer: 0
   m_Name: env_wall_block
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4167,6 +4286,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 109430, guid: d87febd10aecd184d8a00c591a315002, type: 2}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d87febd10aecd184d8a00c591a315002, type: 2}
   m_RootGameObject: {fileID: 2134147601}
@@ -4185,7 +4308,7 @@ GameObject:
   - 23: {fileID: 1038085244}
   m_Layer: 0
   m_Name: env_wall_block
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4283,6 +4406,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 109430, guid: d87febd10aecd184d8a00c591a315002, type: 2}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d87febd10aecd184d8a00c591a315002, type: 2}
   m_RootGameObject: {fileID: 1230634384}
@@ -4301,7 +4428,7 @@ GameObject:
   - 23: {fileID: 1056903487}
   m_Layer: 0
   m_Name: env_wall_block
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4439,7 +4566,7 @@ GameObject:
   - 23: {fileID: 1058694122}
   m_Layer: 0
   m_Name: env_wall_block
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4650,7 +4777,7 @@ GameObject:
   - 23: {fileID: 1092027393}
   m_Layer: 0
   m_Name: env_wall_block
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4722,7 +4849,7 @@ GameObject:
   - 23: {fileID: 1094771978}
   m_Layer: 0
   m_Name: env_wall_block
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4885,6 +5012,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 38
       objectReference: {fileID: 0}
+    - target: {fileID: 109430, guid: d87febd10aecd184d8a00c591a315002, type: 2}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d87febd10aecd184d8a00c591a315002, type: 2}
   m_RootGameObject: {fileID: 144782379}
@@ -4929,6 +5060,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 19
       objectReference: {fileID: 0}
+    - target: {fileID: 109430, guid: d87febd10aecd184d8a00c591a315002, type: 2}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d87febd10aecd184d8a00c591a315002, type: 2}
   m_RootGameObject: {fileID: 2078590783}
@@ -4947,7 +5082,7 @@ GameObject:
   - 23: {fileID: 1119198726}
   m_Layer: 0
   m_Name: env_wall_block
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5132,6 +5267,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 28
       objectReference: {fileID: 0}
+    - target: {fileID: 109430, guid: d87febd10aecd184d8a00c591a315002, type: 2}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d87febd10aecd184d8a00c591a315002, type: 2}
   m_RootGameObject: {fileID: 187819822}
@@ -5150,7 +5289,7 @@ GameObject:
   - 23: {fileID: 1182074543}
   m_Layer: 0
   m_Name: env_wall_block
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5248,6 +5387,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 16
       objectReference: {fileID: 0}
+    - target: {fileID: 109430, guid: d87febd10aecd184d8a00c591a315002, type: 2}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d87febd10aecd184d8a00c591a315002, type: 2}
   m_RootGameObject: {fileID: 1769120312}
@@ -5291,6 +5434,10 @@ Prefab:
     - target: {fileID: 409430, guid: d87febd10aecd184d8a00c591a315002, type: 2}
       propertyPath: m_RootOrder
       value: 42
+      objectReference: {fileID: 0}
+    - target: {fileID: 109430, guid: d87febd10aecd184d8a00c591a315002, type: 2}
+      propertyPath: m_TagString
+      value: Terrain
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d87febd10aecd184d8a00c591a315002, type: 2}
@@ -5336,6 +5483,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 109430, guid: d87febd10aecd184d8a00c591a315002, type: 2}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d87febd10aecd184d8a00c591a315002, type: 2}
   m_RootGameObject: {fileID: 10310904}
@@ -5354,7 +5505,7 @@ GameObject:
   - 23: {fileID: 1230634386}
   m_Layer: 0
   m_Name: env_wall_block
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5452,6 +5603,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 42
       objectReference: {fileID: 0}
+    - target: {fileID: 109430, guid: d87febd10aecd184d8a00c591a315002, type: 2}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d87febd10aecd184d8a00c591a315002, type: 2}
   m_RootGameObject: {fileID: 638022974}
@@ -5471,8 +5626,7 @@ GameObject:
   - 54: {fileID: 1261429056}
   - 114: {fileID: 1261429057}
   - 114: {fileID: 1261429058}
-  - 114: {fileID: 1261429060}
-  - 114: {fileID: 1261429059}
+  - 114: {fileID: 1261429061}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -5559,10 +5713,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
-  maxArmor: 100
   _health: 100
-  _armor: 50
-  healthDmgMultiplier: 2
   isTeleporting: 0
 --- !u!114 &1261429058
 MonoBehaviour:
@@ -5576,7 +5727,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 6
---- !u!114 &1261429059
+--- !u!114 &1261429061
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -5584,23 +5735,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1261429051}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 078b9e2a64e353f4aa75649321f66c84, type: 3}
+  m_Script: {fileID: 11500000, guid: 1e5e8fc15b9bd0444b58bdfc0cfbba65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventory: []
-  environmentRef: {fileID: 0}
---- !u!114 &1261429060
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1261429051}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 775c52e88525cea45bfc74fc614c0016, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  items: []
+  _rotL: 0
+  _rotR: 0
+  _hkit: 0
 --- !u!1001 &1279428355
 Prefab:
   m_ObjectHideFlags: 0
@@ -5639,6 +5779,10 @@ Prefab:
     - target: {fileID: 409430, guid: d87febd10aecd184d8a00c591a315002, type: 2}
       propertyPath: m_RootOrder
       value: 53
+      objectReference: {fileID: 0}
+    - target: {fileID: 109430, guid: d87febd10aecd184d8a00c591a315002, type: 2}
+      propertyPath: m_TagString
+      value: Terrain
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d87febd10aecd184d8a00c591a315002, type: 2}
@@ -5683,6 +5827,10 @@ Prefab:
     - target: {fileID: 409430, guid: d87febd10aecd184d8a00c591a315002, type: 2}
       propertyPath: m_RootOrder
       value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 109430, guid: d87febd10aecd184d8a00c591a315002, type: 2}
+      propertyPath: m_TagString
+      value: Terrain
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d87febd10aecd184d8a00c591a315002, type: 2}
@@ -5780,6 +5928,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 109430, guid: d87febd10aecd184d8a00c591a315002, type: 2}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d87febd10aecd184d8a00c591a315002, type: 2}
   m_RootGameObject: {fileID: 1352999395}
@@ -5798,7 +5950,7 @@ GameObject:
   - 23: {fileID: 1294320976}
   m_Layer: 0
   m_Name: env_wall_block
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5870,7 +6022,7 @@ GameObject:
   - 23: {fileID: 1298528966}
   m_Layer: 0
   m_Name: env_wall_block
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6076,6 +6228,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 109430, guid: d87febd10aecd184d8a00c591a315002, type: 2}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d87febd10aecd184d8a00c591a315002, type: 2}
   m_RootGameObject: {fileID: 1005318545}
@@ -6120,6 +6276,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 109430, guid: d87febd10aecd184d8a00c591a315002, type: 2}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d87febd10aecd184d8a00c591a315002, type: 2}
   m_RootGameObject: {fileID: 1029193217}
@@ -6138,7 +6298,7 @@ GameObject:
   - 23: {fileID: 1352999397}
   m_Layer: 0
   m_Name: env_wall_block
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6236,6 +6396,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 34
       objectReference: {fileID: 0}
+    - target: {fileID: 109430, guid: d87febd10aecd184d8a00c591a315002, type: 2}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d87febd10aecd184d8a00c591a315002, type: 2}
   m_RootGameObject: {fileID: 1653780285}
@@ -6254,7 +6418,7 @@ GameObject:
   - 23: {fileID: 1385573798}
   m_Layer: 0
   m_Name: env_wall_block
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6352,6 +6516,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 22
       objectReference: {fileID: 0}
+    - target: {fileID: 109430, guid: d87febd10aecd184d8a00c591a315002, type: 2}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d87febd10aecd184d8a00c591a315002, type: 2}
   m_RootGameObject: {fileID: 1584397692}
@@ -6396,6 +6564,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 45
       objectReference: {fileID: 0}
+    - target: {fileID: 109430, guid: d87febd10aecd184d8a00c591a315002, type: 2}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d87febd10aecd184d8a00c591a315002, type: 2}
   m_RootGameObject: {fileID: 689092450}
@@ -6414,7 +6586,7 @@ GameObject:
   - 23: {fileID: 1508749935}
   m_Layer: 0
   m_Name: env_wall_block
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6486,7 +6658,7 @@ GameObject:
   - 23: {fileID: 1516464523}
   m_Layer: 0
   m_Name: env_wall_block
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6584,6 +6756,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 109430, guid: d87febd10aecd184d8a00c591a315002, type: 2}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d87febd10aecd184d8a00c591a315002, type: 2}
   m_RootGameObject: {fileID: 378992131}
@@ -6602,7 +6778,7 @@ GameObject:
   - 23: {fileID: 1558079526}
   m_Layer: 0
   m_Name: env_wall_block
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6674,7 +6850,7 @@ GameObject:
   - 23: {fileID: 1558425503}
   m_Layer: 0
   m_Name: env_wall_block
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6746,7 +6922,7 @@ GameObject:
   - 23: {fileID: 1577980123}
   m_Layer: 0
   m_Name: env_wall_block
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6818,7 +6994,7 @@ GameObject:
   - 23: {fileID: 1580417340}
   m_Layer: 0
   m_Name: env_wall_block
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6890,7 +7066,7 @@ GameObject:
   - 23: {fileID: 1584397694}
   m_Layer: 0
   m_Name: env_wall_block
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6962,7 +7138,7 @@ GameObject:
   - 23: {fileID: 1612986878}
   m_Layer: 0
   m_Name: env_wall_block
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7112,6 +7288,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 32
       objectReference: {fileID: 0}
+    - target: {fileID: 109430, guid: d87febd10aecd184d8a00c591a315002, type: 2}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d87febd10aecd184d8a00c591a315002, type: 2}
   m_RootGameObject: {fileID: 1786113669}
@@ -7130,7 +7310,7 @@ GameObject:
   - 23: {fileID: 1653780287}
   m_Layer: 0
   m_Name: env_wall_block
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7202,7 +7382,7 @@ GameObject:
   - 23: {fileID: 1692752402}
   m_Layer: 0
   m_Name: env_wall_block
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7274,7 +7454,7 @@ GameObject:
   - 23: {fileID: 1693532861}
   m_Layer: 0
   m_Name: env_wall_block
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7372,6 +7552,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 29
       objectReference: {fileID: 0}
+    - target: {fileID: 109430, guid: d87febd10aecd184d8a00c591a315002, type: 2}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d87febd10aecd184d8a00c591a315002, type: 2}
   m_RootGameObject: {fileID: 197466258}
@@ -7416,6 +7600,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 54
       objectReference: {fileID: 0}
+    - target: {fileID: 109430, guid: d87febd10aecd184d8a00c591a315002, type: 2}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d87febd10aecd184d8a00c591a315002, type: 2}
   m_RootGameObject: {fileID: 1092027391}
@@ -7434,7 +7622,7 @@ GameObject:
   - 23: {fileID: 1736576750}
   m_Layer: 0
   m_Name: env_wall_block
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7506,7 +7694,7 @@ GameObject:
   - 23: {fileID: 1758853947}
   m_Layer: 0
   m_Name: env_wall_block
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7604,6 +7792,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 109430, guid: d87febd10aecd184d8a00c591a315002, type: 2}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d87febd10aecd184d8a00c591a315002, type: 2}
   m_RootGameObject: {fileID: 1058694120}
@@ -7648,6 +7840,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 109430, guid: d87febd10aecd184d8a00c591a315002, type: 2}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d87febd10aecd184d8a00c591a315002, type: 2}
   m_RootGameObject: {fileID: 717296146}
@@ -7666,7 +7862,7 @@ GameObject:
   - 23: {fileID: 1766312154}
   m_Layer: 0
   m_Name: env_wall_block
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7738,7 +7934,7 @@ GameObject:
   - 23: {fileID: 1769120314}
   m_Layer: 0
   m_Name: env_wall_block
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7810,7 +8006,7 @@ GameObject:
   - 23: {fileID: 1786113671}
   m_Layer: 0
   m_Name: env_wall_block
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7908,6 +8104,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 52
       objectReference: {fileID: 0}
+    - target: {fileID: 109430, guid: d87febd10aecd184d8a00c591a315002, type: 2}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d87febd10aecd184d8a00c591a315002, type: 2}
   m_RootGameObject: {fileID: 1508749933}
@@ -7951,6 +8151,10 @@ Prefab:
     - target: {fileID: 409430, guid: d87febd10aecd184d8a00c591a315002, type: 2}
       propertyPath: m_RootOrder
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 109430, guid: d87febd10aecd184d8a00c591a315002, type: 2}
+      propertyPath: m_TagString
+      value: Terrain
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d87febd10aecd184d8a00c591a315002, type: 2}
@@ -8042,7 +8246,7 @@ GameObject:
   - 23: {fileID: 1827768464}
   m_Layer: 0
   m_Name: env_wall_block
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8182,7 +8386,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2242f4f320fae0439c2b0b7205a88f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthGain: 10
 --- !u!1 &1829962409
 GameObject:
   m_ObjectHideFlags: 0
@@ -8196,7 +8399,7 @@ GameObject:
   - 23: {fileID: 1829962411}
   m_Layer: 0
   m_Name: env_wall_block
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8458,6 +8661,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 109430, guid: d87febd10aecd184d8a00c591a315002, type: 2}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d87febd10aecd184d8a00c591a315002, type: 2}
   m_RootGameObject: {fileID: 958021722}
@@ -8476,7 +8683,7 @@ GameObject:
   - 23: {fileID: 1887758634}
   m_Layer: 0
   m_Name: env_wall_block
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8574,6 +8781,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 47
       objectReference: {fileID: 0}
+    - target: {fileID: 109430, guid: d87febd10aecd184d8a00c591a315002, type: 2}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d87febd10aecd184d8a00c591a315002, type: 2}
   m_RootGameObject: {fileID: 1577980121}
@@ -8592,7 +8803,7 @@ GameObject:
   - 23: {fileID: 1925127778}
   m_Layer: 0
   m_Name: env_wall_block
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8773,6 +8984,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f3b5ebae727133c43af4699ebea62904, type: 2}
+    - target: {fileID: 109430, guid: d87febd10aecd184d8a00c591a315002, type: 2}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d87febd10aecd184d8a00c591a315002, type: 2}
   m_RootGameObject: {fileID: 1056903485}
@@ -8905,6 +9120,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 61
       objectReference: {fileID: 0}
+    - target: {fileID: 109430, guid: d87febd10aecd184d8a00c591a315002, type: 2}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d87febd10aecd184d8a00c591a315002, type: 2}
   m_RootGameObject: {fileID: 83662371}
@@ -8923,7 +9142,7 @@ GameObject:
   - 23: {fileID: 2008914759}
   m_Layer: 0
   m_Name: env_wall_block
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8995,7 +9214,7 @@ GameObject:
   - 23: {fileID: 2017662329}
   m_Layer: 0
   m_Name: env_wall_block
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9155,7 +9374,7 @@ GameObject:
   - 23: {fileID: 2042783290}
   m_Layer: 0
   m_Name: env_wall_block
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9227,7 +9446,7 @@ GameObject:
   - 23: {fileID: 2046022234}
   m_Layer: 0
   m_Name: env_wall_block
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9325,6 +9544,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 109430, guid: d87febd10aecd184d8a00c591a315002, type: 2}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d87febd10aecd184d8a00c591a315002, type: 2}
   m_RootGameObject: {fileID: 1385573796}
@@ -9369,6 +9592,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 33
       objectReference: {fileID: 0}
+    - target: {fileID: 109430, guid: d87febd10aecd184d8a00c591a315002, type: 2}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d87febd10aecd184d8a00c591a315002, type: 2}
   m_RootGameObject: {fileID: 219896529}
@@ -9387,7 +9614,7 @@ GameObject:
   - 23: {fileID: 2078590785}
   m_Layer: 0
   m_Name: env_wall_block
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9459,7 +9686,7 @@ GameObject:
   - 23: {fileID: 2088448513}
   m_Layer: 0
   m_Name: env_wall_block
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9528,7 +9755,7 @@ GameObject:
   - 4: {fileID: 2094309773}
   m_Layer: 0
   m_Name: Walls
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9789,7 +10016,7 @@ GameObject:
   - 23: {fileID: 2134147603}
   m_Layer: 0
   m_Name: env_wall_block
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9886,6 +10113,10 @@ Prefab:
     - target: {fileID: 409430, guid: d87febd10aecd184d8a00c591a315002, type: 2}
       propertyPath: m_RootOrder
       value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 109430, guid: d87febd10aecd184d8a00c591a315002, type: 2}
+      propertyPath: m_TagString
+      value: Terrain
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d87febd10aecd184d8a00c591a315002, type: 2}

@@ -1,9 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
+// Kirill
 
 public class Collectable : MonoBehaviour {
-
-	public int healthGain = 10;
 
 	private PlayerValues singleton;
 
@@ -18,7 +17,7 @@ public class Collectable : MonoBehaviour {
 		if (other.tag == "Player") 
 		{
 			if (this.tag == "Health") {
-				other.GetComponent<PlayerValues>().PlayerHealthGain(healthGain);
+				other.GetComponent<SimpleInventory>().hkit += 1;
 				Debug.Log ("Health is collected");
 				Destroy (this.gameObject);
 			}

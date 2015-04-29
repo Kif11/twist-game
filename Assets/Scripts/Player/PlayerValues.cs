@@ -1,38 +1,32 @@
 ﻿using UnityEngine;
 using System.Collections;
 // Young Chu
-// Script handling health and armor values of player
+// Script handling health value of player and Level transition
 
-// TODO: Remove armor function
+// Keeps the gameobject from being destroyed on load
 public class PlayerValues : MonoBehaviour 
 {
+	// instance of this component for easy access
 	private static PlayerValues _instance;
 
 	// maximum health player can have
 	[SerializeField]
 	private float maxHealth = 100f;
-	// max armor player can have
-	[SerializeField]
-	private float maxArmor = 100f;
 
+	// current health value of player
 	[SerializeField]
 	private float _health = 100f;
-	
-	// armor absorbs all damage for a 1:1 ratio of the listed damage
-	[SerializeField]
-	private float _armor = 50f;
 
-	// multiplier used in calculation of increased health damage, set to 1 for regular damage
-	[SerializeField]
-	private float healthDmgMultiplier = 2f;
-
+	// Bool checking if player is teleporting or not
 	public bool isTeleporting = false;
 
+	// Things to do when resetting/putting this component on something
 	void Reset()
 	{
 		_health = 100f;
 	}
 
+	// setting instance var and making sure this object is carried over each scene
 	void Awake ()
 	{
 		if(_instance == null)
@@ -57,72 +51,9 @@ public class PlayerValues : MonoBehaviour
 		}
 	}
 
-	/// <summary>
-	/// function used to deal damage to player
-	/// typically from bullets/enemies
-	/// </summary>
-	public void PlayerHealthLoss (float damage)
-	{
-		// check if armor is more than 0 first
-		if(_armor > 0)
-		{
-			// is the damage being dealt more than armor value? ...
-			if(damage > _armor)
-			{
-				// store excessive damage into a float
-				float leftoverDamage = damage - _armor;
-
-				// apply damage to armor
-				_armor -= damage;
-
-				// check so it doesnt go negative armor
-				if(_armor <= 0)
-				{
-					_armor = 0;
-				}
-
-				// deal damage with left over damage times multiplier
-				_health = _health - (leftoverDamage * healthDmgMultiplier);
-
-				//check if player is dead
-				if(_health <= 0)
-				{
-					_health = 0;
-					// game over
-				}
-			}
-			// ... no? just deal damage to armor then
-			_armor -= damage;
-			if(_armor <= 0)
-			{
-				armor = 0;
-			}
-		}
-		// dont have any armor? deal damage to health with following formula
-		else
-		{
-			_health = _health - (damage * healthDmgMultiplier);
-			if(_health <= 0)
-			{
-				_health = 0;
-				// game over
-			}
-		}
-	}
-
 
 	/// <summary>
-	/// function used to restore health
-	/// typically from health collectables
-	/// </summary>
-	public void PlayerHealthGain (float gain)
-	{
-		_health += gain;
-	}
-
-	/// <summary>
-	/// Used when healing, or taking scripted damage
-	/// rather than from enemies
+	/// Getter/Setter for _health variable
 	/// </summary>
 	public float health
 	{
@@ -140,8 +71,7 @@ public class PlayerValues : MonoBehaviour
 				_health = 0;
 				// die/ game over
 			}
-			/// checking if current health value exceeds max health value
-			/// is health greater than max Health value?
+			// checking if current health value exceeds max health value
 			if(_health >= maxHealth)
 			{
 				// if yes, set it to be just maxHealth value then
@@ -149,26 +79,7 @@ public class PlayerValues : MonoBehaviour
 			}
 		}
 	}
-	
-	public float armor
-	{
-		get
-		{
-			return _armor;
-		}
-		set
-		{
-			_armor = value;
-			if(_armor <= 0)
-			{
-				_armor = 0;
-			}
-			if(_armor >= maxArmor)
-			{
-				_armor = maxArmor;
-			}
-		}
-	}
+
 
 	// loading next scene
 	public IEnumerator LoadNextScene(string name, float waitTime) // function parameters...name of scene, how long until we load
