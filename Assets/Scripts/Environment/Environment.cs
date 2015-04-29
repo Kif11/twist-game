@@ -11,14 +11,14 @@ public class Environment : MonoBehaviour
 	public bool inverseGravity = false;
 
 	private GameObject player;
-	private Vector3 direction;
+	public Vector3 direction;
 
 	// Angle of to rotate level to
 	private int angle = 90;
 
 	// Variable to hold rotation state
 	// true mean that level is currently rotating
-	private bool rotating = false;
+	public bool rotating = false;
 		
 	void Start () 
 	{
@@ -52,8 +52,17 @@ public class Environment : MonoBehaviour
 		}
 	}
 
+	// Mainly used for calling Rotate Coroutine from other components
+	public void CallRotate()
+	{
+		if(!rotating)
+		{
+			StartCoroutine (Rotate(direction));
+		}
+	}
+
 	// Rotate object to an angle
-	IEnumerator Rotate (Vector3 direction)
+	public IEnumerator Rotate (Vector3 direction)
 	{
 		rotating = true;
 

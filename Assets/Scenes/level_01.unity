@@ -673,7 +673,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!114 &131687754
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -682,7 +682,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 131687748}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83bfc299c78216140b20dd13cd0fa23f, type: 3}
+  m_Script: {fileID: 11500000, guid: 5efbfafbdfd803541928259bf1d50d6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   smooth: 1.5
@@ -1529,7 +1529,7 @@ Transform:
   - {fileID: 2118591808}
   - {fileID: 1831858499}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!114 &357578205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1543,6 +1543,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level: {fileID: 0}
   inverseGravity: 0
+  direction: {x: 0, y: 0, z: 0}
+  rotating: 0
 --- !u!54 &357578206
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5167,6 +5169,8 @@ GameObject:
   - 54: {fileID: 1261429056}
   - 114: {fileID: 1261429057}
   - 114: {fileID: 1261429058}
+  - 114: {fileID: 1261429060}
+  - 114: {fileID: 1261429059}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -5270,6 +5274,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 6
+--- !u!114 &1261429059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1261429051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 078b9e2a64e353f4aa75649321f66c84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventory: []
+  environmentRef: {fileID: 0}
+--- !u!114 &1261429060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1261429051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 775c52e88525cea45bfc74fc614c0016, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items: []
 --- !u!1001 &1279428355
 Prefab:
   m_ObjectHideFlags: 0
