@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+// Kirill Kovalevskiy
+// Handles how camera moves and sets player position
 
 public class CameraMove2 : MonoBehaviour
 {
@@ -12,7 +14,9 @@ public class CameraMove2 : MonoBehaviour
 	private float relCameraPosMag;      // The distance of the camera from the player.
 	private Vector3 newPos;             // The position the camera is trying to reach.
 
-
+	// Young
+	// Sets player's position to 0,0,0 everytime camera is loaded (each scene)
+	// we build our level around that fact
 	void Start()
 	{
 		player.position = Vector3.zero;
@@ -20,7 +24,7 @@ public class CameraMove2 : MonoBehaviour
 	
 	void Awake ()
 	{
-		// Setting up the reference.
+		// Setting up the reference or player.
 		player = GameObject.FindGameObjectWithTag("Player").transform;
 		
 		// Setting the relative position as the initial relative position of the camera in the scene.

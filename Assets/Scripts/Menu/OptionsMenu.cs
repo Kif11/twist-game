@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+// Kirill Kovalevskiy
 
 public class OptionsMenu : MonoBehaviour {
 

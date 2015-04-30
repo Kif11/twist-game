@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+// Kirill Kovalevskiy
 
 public class Portal : MonoBehaviour {
 

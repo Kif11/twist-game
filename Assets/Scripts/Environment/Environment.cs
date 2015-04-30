@@ -1,6 +1,5 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
-// Young Chu
 // Kirill Kovalevskiy
 // Script controlling environment behavior
 

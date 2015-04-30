@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+// Kirill Kovalevskiy
+// Game Manager, loads scenes
 
 public class GameController : MonoBehaviour 
 {

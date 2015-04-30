@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 // Young Chu
-// Handles health value and dropping something upon death
+// Handles health value and what happens when it takes damage/dies
 
 public class Tier2EnemyValues : EnemyValuesClass 
 {

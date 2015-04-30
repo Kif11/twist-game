@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
+// Kirill Kovalevskiy
 
 public class GravityAnomaly : MonoBehaviour {
 
-	// Anomaly type dropdown meny
+	// Anomaly type dropdown menu
 	public enum AnomalyType {Reverse, Low, Zero};
 	public AnomalyType anomalyType;
 

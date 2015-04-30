@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 // Young Chu
-// Bullet behaviour useable for both enemy and player
+// Bullet behaviour against player
 
 public class BulletBehaviour : MonoBehaviour 
 {

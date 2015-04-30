@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 // Young Chu
-// Script handling health value of player and Level transition
+// Script handling health value of player
 
 // Keeps the gameobject from being destroyed on load
 public class PlayerValues : MonoBehaviour 
@@ -34,6 +34,13 @@ public class PlayerValues : MonoBehaviour
 			_instance = this;
 			// Stops this object from being destroyed when loading scenes
 			DontDestroyOnLoad(_instance.gameObject);
+		}
+		else
+		{
+			//If a Singleton already exists and you find
+			//another reference in scene, destroy it!
+			if(this != _instance)
+				Destroy(this.gameObject);
 		}
 	}
 
