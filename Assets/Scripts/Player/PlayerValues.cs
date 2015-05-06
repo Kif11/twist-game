@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 // Young Chu
-// Script handling health value of player
+// Script handling numerical values and booleans regarding player
 
 // Keeps the gameobject from being destroyed on load
 public class PlayerValues : MonoBehaviour 
@@ -9,9 +9,12 @@ public class PlayerValues : MonoBehaviour
 	// instance of this component for easy access
 	private static PlayerValues _instance;
 
+	// reference to Game Manager
+	private GameManager gm;
+
 	// maximum health player can have
 	[SerializeField]
-	private float maxHealth = 100f;
+	private float _maxHealth = 100f;
 
 	// current health value of player
 	[SerializeField]
@@ -19,6 +22,10 @@ public class PlayerValues : MonoBehaviour
 
 	// Bool checking if player is teleporting or not
 	public bool isTeleporting = false;
+
+	// Restart Button boolean
+	private bool restartPressed = false;		
+
 
 	// Things to do when resetting/putting this component on something
 	void Reset()
@@ -42,6 +49,42 @@ public class PlayerValues : MonoBehaviour
 			if(this != _instance)
 				Destroy(this.gameObject);
 		}
+	}
+
+	void Start()
+	{
+		gm = GameManager.GMinstance;
+	}
+
+	void Update()
+	{
+		// assigning bool a keypress to respond to
+		restartPressed = Input.GetKeyDown (KeyCode.R);
+
+		// if R is pressed
+		if(restartPressed)
+		{
+			// call ReloadLevel function from GameManager component
+			gm.ReloadLevel();
+			// Run restart function to reset everything that should be resetted
+			LevelRestarted();
+		}
+	}
+
+	// Function that resets all values that should be resetted on player when restarting level
+	public void LevelRestarted()
+	{
+		// resetting renderer back to visible
+		renderer.enabled = true;
+
+		// resetting health
+		_health = 100;
+
+		// Resetting inventory
+		this.GetComponent<SimpleInventory>().rotL = 0;
+		this.GetComponent<SimpleInventory>().rotR = 0;
+		this.GetComponent<SimpleInventory>().hkit = 0;
+		this.GetComponent<SimpleInventory>().gravRev = 0;
 	}
 
 	// A just in case for when this instance is actually called to make sure that there is something assigned to instance var
@@ -76,23 +119,31 @@ public class PlayerValues : MonoBehaviour
 			if(_health <= 0)
 			{
 				_health = 0;
-				// die/ game over
+				// emulating destroying object, without the errors
+				// calls on player's movement speed to 0, so cant move
+				this.GetComponent<PlayerMovement>().speed = 0;
+				// turn off renderer
+				renderer.enabled = false;
 			}
 			// checking if current health value exceeds max health value
-			if(_health >= maxHealth)
+			if(_health >= _maxHealth)
 			{
 				// if yes, set it to be just maxHealth value then
-				_health = maxHealth;
+				_health = _maxHealth;
 			}
 		}
 	}
 
-
-	// loading next scene
-	public IEnumerator LoadNextScene(string name, float waitTime) // function parameters...name of scene, how long until we load
+	public float maxHealth
 	{
-		yield return new WaitForSeconds(waitTime); 
-		Application.LoadLevel(name); 
+		get
+		{
+			return _maxHealth;
+		}
+		set
+		{
+			_maxHealth = value;
+		}
 	}
 }
 

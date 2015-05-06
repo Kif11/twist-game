@@ -3,21 +3,20 @@ using System.Collections;
 // Kirill Kovalevskiy
 // Script controlling player movement
 
+[RequireComponent(typeof(Rigidbody))]
 public class PlayerMovement : MonoBehaviour {
 
 	public float speed = 6f;            // The speed that the player will move at.
 	
-	Vector3 movement;                   // The vector to store the direction of the player's movement.
-	Rigidbody playerRigidbody;          // Reference to the player's rigidbody.
+	private Vector3 movement;                   // The vector to store the direction of the player's movement.
+	private Rigidbody playerRigidbody;          // Reference to the player's rigidbody.
 
-	
 	void Awake ()
 	{
 		// Set up references.
 		playerRigidbody = GetComponent <Rigidbody> ();
 	}
-	
-	
+
 	void FixedUpdate ()
 	{
 		// Store the input axes.

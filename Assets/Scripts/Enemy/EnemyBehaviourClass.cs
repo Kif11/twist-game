@@ -17,6 +17,8 @@ public class EnemyBehaviourClass : MonoBehaviour
 	// Store into an enemyState type variable
 	public enemyState currentState;
 
+	private PlayerValues instance;
+
 	/// <summary>
 	/// Range detection variables
 	/// </summary>
@@ -52,6 +54,8 @@ public class EnemyBehaviourClass : MonoBehaviour
 		// find transform of target using its tag
 		// hopefully theres always something tagged Player, otherwise an error occurs
 		target = GameObject.FindGameObjectWithTag("Player").transform;
+
+		instance = PlayerValues.instance;
 	}
 
 	/// <summary>
@@ -87,8 +91,8 @@ public class EnemyBehaviourClass : MonoBehaviour
 			targetSighted = false;
 			break; // Break out
 		case enemyState.attacking:
-			// calls attack coroutine if can fire and player is in line of sight
-			if(canFire == true && targetSighted == true)
+			// calls attack coroutine if can fire and player is in line of sight AND if player's health is more than 0
+			if(canFire == true && targetSighted == true && instance.health > 0)
 			{
 				StartCoroutine(EnemyAttack ());
 			}

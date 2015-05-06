@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 // Kirill Kovalevskiy
+// UI
 
 public class GamePlay : MonoBehaviour {
 
@@ -19,12 +20,12 @@ public class GamePlay : MonoBehaviour {
 	void Start () 
 	{
 		gameManagerObject = GameObject.FindGameObjectWithTag("GameManager");
-		gameManager = gameManagerObject.GetComponent<GameManager>();
+ 		gameManager = gameManagerObject.GetComponent<GameManager>();
 
 		difLevelTextObject = GameObject.FindGameObjectWithTag("DifficultyText");
 		difText = difLevelTextObject.GetComponent<Text>();
 		difText.text = "Difficulty: " + gameManager.difficultyLevel;
-
+		
 		timerObject = GameObject.FindGameObjectWithTag("TimerText");
 		timerText = timerObject.GetComponent<Text>();
 	}

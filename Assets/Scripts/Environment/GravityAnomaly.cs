@@ -26,15 +26,12 @@ public class GravityAnomaly : MonoBehaviour {
 			switch (anomalyType)
 			{
 			case AnomalyType.Reverse:
-				//Debug.Log("You are in Reverse anomaly");
 				rb.AddForce(Physics.gravity * rb.mass*-3);
 				break;
 			case AnomalyType.Low:
-				//Debug.Log("You are in Low anomaly");
 				rb.AddForce(Physics.gravity * rb.mass*-0.7f);
 				break;
 			case AnomalyType.Zero:
-				//Debug.Log("You are in Zero anomaly");
 				break;
 			}
 			

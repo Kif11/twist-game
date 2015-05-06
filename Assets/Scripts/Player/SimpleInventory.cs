@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 // Young Chu
-// Simple NOT Dynamic inventory-esque component
+// Simple NON-Dynamic inventory-esque component
 // This script assumes each button press/item slot is dedicated to only one item forever
 // eg. 1 is always Health Potion, 2 is always Mana Potion, 3 is always etc..
 
+// Requires Rigidbody because of the Reverse Gravity item
+[RequireComponent(typeof(Rigidbody))]
 public class SimpleInventory : MonoBehaviour 
 {
 	/// <summary>
@@ -34,26 +36,20 @@ public class SimpleInventory : MonoBehaviour
 	private int _gravRev	= 0;
 
 	[SerializeField]
-	[Tooltip("Current number of Lower Gravity Artifacts in inventory")]
-	private int _gravLow 	= 0;
-
-	[SerializeField]
 	[Tooltip("Current number of Health Kits in inventory")]
 	private int _hkit 		= 0;
 
 	/// <summary>
-	/// Booleans for button presses of 1/2/3/4/5
+	/// Booleans for button presses of 1/2/3/4
 	/// 1 = rotL
 	/// 2 = rotR
 	/// 3 = gravRev
-	/// 4 = gravLow
-	/// 5 = hkit
+	/// 4 = hkit
 	/// </summary>
 	private bool oneP;
 	private bool twoP;
 	private bool threeP;
 	private bool fourP;
-	private bool fiveP;
 
 	/// <summary>
 	/// Environment component reference
@@ -61,11 +57,20 @@ public class SimpleInventory : MonoBehaviour
 	/// </summary>
 	private Environment environmentRef;
 
+	/// <summary>
+	/// Reverse Gravity
+	/// </summary>
+	private Rigidbody rb = null;
+	private bool inverseGravity = false;
+
 
 	void Start()
 	{
 		// running function to find reference to Environment
 		SetEnvironment();
+
+		// setting rb
+		rb = this.GetComponent<Rigidbody>();
 	}
 
 
@@ -84,25 +89,23 @@ public class SimpleInventory : MonoBehaviour
 		twoP = Input.GetKeyDown(KeyCode.Alpha2);
 		threeP = Input.GetKeyDown(KeyCode.Alpha3);
 		fourP = Input.GetKeyDown (KeyCode.Alpha4);
-		fiveP = Input.GetKeyDown(KeyCode.Alpha5);
 
-		// If oneP is pressed
-		if(oneP)
+		// If oneP is pressed and environment isnt already rotating
+		if(oneP && !environmentRef.rotating)
 		{
 			// and if Rotate Left uses is more than 0
-			if(_rotL > 0 && !environmentRef.rotating)
+			if(_rotL > 0)
 			{
-				//rotate level left
+				// set rotate direction
 				environmentRef.direction = Vector3.forward;
+				// rotate
 				environmentRef.CallRotate ();
-				Debug.Log ("Used Rotate Left Artifact");
 				// Taking away a use, use the get/set function to be extra defensive
 				rotL -= 1;
 			}
 			// otherwise (if !> 0 uses)
 			else
 			{
-				Debug.Log ("No Rotate Left Artifact in inventory right now!");
 				// display text on screen saying dont have any
 			}
 		}
@@ -110,69 +113,66 @@ public class SimpleInventory : MonoBehaviour
 		{
 			if(_rotR > 0)
 			{
-				// rotate right
+				// set rotate direction
 				environmentRef.direction = Vector3.back;
+				// rotate
 				environmentRef.CallRotate();
-				Debug.Log ("Used Rotate Right Artifact");
 				// take away a use
-				rotL -= 1;
+				rotR -= 1;
 			}
 			else
 			{
-				Debug.Log ("No Rotate Right Artifact in inventory right now!");
 				// display text
 			}
 		}
 		if(threeP)
 		{
-			if(_gravRev > 0)
+			// if gravity isnt inversed alraedy
+			if(inverseGravity == false)
 			{
-				// Reverse gravity
-
-				Debug.Log ("Used Reverse Gravity Artifact");
-				// take away a use
-				gravRev -= 1;
+				// and have a gravity item to use
+				if(_gravRev > 0)
+				{
+					// Set inverse gravity to true
+					inverseGravity = true;
+					// take away a use
+					gravRev -= 1;
+				}
+				else
+				{
+					// display
+				}
 			}
+			// otherwise (its already rotating)
 			else
 			{
-				Debug.Log ("No Reverse Gravity Artifact in inventory right now!");
-				// display
+				// set it to false
+				inverseGravity = false;
 			}
-		}
-		if(fourP)
-		{
-			if(_gravLow > 0)
-			{
-				// Lower gravity
 
-				Debug.Log ("Used Low Gravity Artifact");
-				// take away a use
-				gravLow -= 1;
-			}
-			else
-			{
-				Debug.Log ("No Low Gravity Artifact in inventory right now!");
-				// display
-			}
 		}
-		if(fiveP)
+		if(fourP && PlayerValues.instance.health >= PlayerValues.instance.maxHealth)
 		{
 			if(_hkit > 0)
 			{
 				// heal without a reference since its on same game object
 				PlayerValues.instance.health += 25;
-				Debug.Log ("Used Health Kit");
 				// take away a use
 				hkit -= 1;
 			}
 			else
 			{
-				Debug.Log ("No Health Kit in inventory right now!");
 				// display
 			}
 		}
-	}
 
+		// if inverse gravity is true
+		if(inverseGravity == true)
+		{
+			// reverse gravity for player
+			rb.AddForce(Physics.gravity * rb.mass*-3);
+		}
+	}
 
 	/// <summary>
 	/// Getter/Setter for quantity of each item
@@ -225,22 +225,6 @@ public class SimpleInventory : MonoBehaviour
 			if(_gravRev < 0)
 			{
 				_gravRev = 0;
-			}
-		}
-	}
-
-	public int gravLow
-	{
-		get
-		{
-			return _gravLow;
-		}
-		set
-		{
-			_gravLow = value;
-			if(_gravLow < 0)
-			{
-				_gravLow = 0;
 			}
 		}
 	}
