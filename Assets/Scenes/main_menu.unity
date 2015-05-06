@@ -579,7 +579,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 418412941}
-  - 114: {fileID: 418412942}
   - 114: {fileID: 418412943}
   m_Layer: 0
   m_Name: Options
@@ -601,17 +600,6 @@ Transform:
   - {fileID: 2139363136}
   m_Father: {fileID: 760495411}
   m_RootOrder: 1
---- !u!114 &418412942
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 418412940}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3b9fadf19554d3489217c2ac28e70f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &418412943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1039,11 +1027,10 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 760495411}
-  - 114: {fileID: 760495412}
   - 114: {fileID: 760495413}
   m_Layer: 0
   m_Name: GameManager
-  m_TagString: Untagged
+  m_TagString: GameManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1064,17 +1051,6 @@ Transform:
   - {fileID: 2110214460}
   m_Father: {fileID: 0}
   m_RootOrder: 1
---- !u!114 &760495412
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 760495410}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81dece703df6db1499af662c4541a4f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &760495413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2917,7 +2893,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2110214460}
-  - 114: {fileID: 2110214461}
   - 114: {fileID: 2110214462}
   m_Layer: 0
   m_Name: GamePlay
@@ -2939,17 +2914,6 @@ Transform:
   - {fileID: 1180470542}
   m_Father: {fileID: 760495411}
   m_RootOrder: 3
---- !u!114 &2110214461
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2110214459}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80586cc179065e34d9cd322e23e08423, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2110214462
 MonoBehaviour:
   m_ObjectHideFlags: 0

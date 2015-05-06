@@ -5,21 +5,32 @@ using UnityEngine.UI;
 
 public class GamePlay : MonoBehaviour {
 
-	GameManager gm;
-	Text difLevel;
+	GameObject gameManagerObject;
+	GameObject difLevelTextObject;
+	GameObject timerObject;
+	GameObject helpTextObject;
+
+	GameManager gameManager;
+
+	Text difText;
+	Text timerText;
 	
 	// Use this for initialization
-	void Awake () 
+	void Start () 
 	{
-		gm = GetComponentInParent<GameManager>();
-		difLevel = transform.FindChild("Canvas/Difficulty").GetComponent<Text>();
+		gameManagerObject = GameObject.FindGameObjectWithTag("GameManager");
+		gameManager = gameManagerObject.GetComponent<GameManager>();
+
+		difLevelTextObject = GameObject.FindGameObjectWithTag("DifficultyText");
+		difText = difLevelTextObject.GetComponent<Text>();
+		difText.text = "Difficulty: " + gameManager.difficultyLevel;
+
+		timerObject = GameObject.FindGameObjectWithTag("TimerText");
+		timerText = timerObject.GetComponent<Text>();
 	}
-	
-	// This run when the object is turned on
-	void OnEnable () 
+
+	void Update()
 	{
-	
-		difLevel.text = "Difficulty: " + gm.difficultyLevel;
-	
+		timerText.text = "Time: " + Time.time;
 	}
 }

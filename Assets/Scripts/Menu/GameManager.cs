@@ -18,13 +18,14 @@ public class GameManager : MonoBehaviour
 	// Find out what child game object we have
 	public void ListChildren()
 	{
-		int children = transform.childCount; // Show how many children we have (not embeded)
+		// Show how many children we have (not embeded)
+		int children = transform.childCount; 
 		for(int i = 0; i < children; i++)
 		{
-			Debug.Log (transform.GetChild (i)); // Return name of the child
+			// Return name of the child
+//			Debug.Log (transform.GetChild (i)); 
 		}
-		
-		Debug.Log (children);
+
 	}
 	
 	// Turn on and off our sates
@@ -47,11 +48,11 @@ public class GameManager : MonoBehaviour
 	public void StartGame()
 	{
 		// Load first level
-		Debug.Log ("Loading level...");
+//		Debug.Log ("Loading level...");
 		Application.LoadLevel("level_01");
 
 		// Make menu inactive after transition to the first level
-		this.gameObject.SetActive (false);
+//		this.gameObject.SetActive (false);
 
 		// Destroy extra menu elements that we no longer need
 		foreach (Transform child in this.transform) 
