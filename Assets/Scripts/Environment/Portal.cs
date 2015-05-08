@@ -21,9 +21,6 @@ public class Portal : MonoBehaviour {
 	
 	void OnTriggerEnter(Collider other) 
 	{
-	
-		Debug.Log (playerValues.isTeleporting);
-
 		// If Player enter the portal
 		if (other.tag == "Player")
 		{

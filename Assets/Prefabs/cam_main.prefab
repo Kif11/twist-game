@@ -11,8 +11,8 @@ GameObject:
   - 20: {fileID: 2002226}
   - 92: {fileID: 9202226}
   - 124: {fileID: 12402226}
-  - 81: {fileID: 8102226}
   - 114: {fileID: 11402226}
+  - 81: {fileID: 8128022}
   m_Layer: 0
   m_Name: cam_main
   m_TagString: MainCamera
@@ -64,7 +64,7 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: .0219999999
---- !u!81 &8102226
+--- !u!81 &8128022
 AudioListener:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}

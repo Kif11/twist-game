@@ -56,6 +56,9 @@ public class EnemyBehaviourClass : MonoBehaviour
 		target = GameObject.FindGameObjectWithTag("Player").transform;
 
 		instance = PlayerValues.instance;
+
+		// load enemy bullet prefab
+		bulletPrefab = Resources.Load("EnemyBullet") as GameObject;
 	}
 
 	/// <summary>

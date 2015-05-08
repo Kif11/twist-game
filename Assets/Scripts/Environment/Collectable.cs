@@ -15,12 +15,20 @@ public class Collectable : MonoBehaviour {
 	public enum itemType {health, rotL, rotR, gravRev, goal}
 	public itemType item;
 
+	// game manager instance reference
 	private GameManager gm;
 
+	// camera reference
+	private CameraMove2 cam;
+
+	// rotate speed of collectibles
+	[SerializeField]
+	private float speed = 10f;
 
 	void Start()
 	{
 		gm = GameManager.GMinstance;
+		cam = CameraMove2.camInstance;
 	}
 
 	void OnTriggerEnter(Collider other)
@@ -35,32 +43,45 @@ public class Collectable : MonoBehaviour {
 				// reference Player's inventory component and add 1 health kit
 				other.GetComponent<SimpleInventory>().hkit += 1;
 				// notification
-				Debug.Log ("Health collected");
 				// remove item from scene
 				Destroy (this.gameObject);
 				break;
+				// if item is rotate Left
 			case itemType.rotL:
 				other.GetComponent<SimpleInventory>().rotL += 1;
-				Debug.Log ("Rotate Left Artifact collected");
 				Destroy (this.gameObject);
 				break;
+				// if item is rotate right
 			case itemType.rotR:
 				other.GetComponent<SimpleInventory>().rotR += 1;
-				Debug.Log ("Rotate Right Artifact collected");
 				Destroy (this.gameObject);
 				break;
+				// if item is reverse gravity
 			case itemType.gravRev:
 				other.GetComponent <SimpleInventory>().gravRev += 1;
-				Debug.Log ("Reverse Gravity collected");
 				Destroy (this.gameObject);
 				break;
+				// if item was goal
 			case itemType.goal:
+				// reset most of player's inventory when beating a level
+				other.GetComponent<SimpleInventory>().ResetInventory();
+				// make sure gravity is normal for them when they move on
+				other.GetComponent<SimpleInventory>().inverseGravity = false;
+				// run new level function on camera
+				cam.NewLevelStuff();
+				// load level
 				gm.LoadNextLevel();
-				Debug.Log ("Loading New Level");
+				// destroy object for good measure
 				Destroy (this.gameObject);
 				break;
 			}
 
 		}
+	}
+
+	void Update()
+	{
+		// Rotating collectibles so it stands out more
+		transform.Rotate(new Vector3(30, 60, 90), speed * Time.deltaTime);
 	}
 }

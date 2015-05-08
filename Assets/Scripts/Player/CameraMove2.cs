@@ -5,99 +5,68 @@ using System.Collections;
 
 public class CameraMove2 : MonoBehaviour
 {
+	private static CameraMove2 _camInstance;	// Cam instance
 
-	public float smooth = 1.5f;         // The relative speed at which the camera will catch up.
-	
-	
-	private Transform player;           // Reference to the player's transform.
-	private Vector3 relCameraPos;       // The relative position of the camera from the player.
-	private float relCameraPosMag;      // The distance of the camera from the player.
-	private Vector3 newPos;             // The position the camera is trying to reach.
+	public float smooth = 1.5f;         	// The relative speed at which the camera will catch up.
 
-	// Young
-	// Sets player's position to 0,0,0 everytime camera is loaded (each scene)
-	// we build our level around that fact
-	void Start()
+	private Transform player;           	// Reference to the player's transform.
+	private SimpleInventory inventoryRef; 	// Reference to simpleinventory component
+
+
+	public static CameraMove2 camInstance
 	{
-		player.position = Vector3.zero;
+		get
+		{
+			if(_camInstance == null)
+			{
+				_camInstance = GameObject.FindObjectOfType<CameraMove2>();
+			}
+			
+			return _camInstance;
+		}
 	}
+
 	
 	void Awake ()
 	{
-		// Setting up the reference or player.
-		player = GameObject.FindGameObjectWithTag("Player").transform;
-		
-		// Setting the relative position as the initial relative position of the camera in the scene.
-		relCameraPos = transform.position - player.position;
-		relCameraPosMag = relCameraPos.magnitude - 0.5f;
-	}
-	
-	
-	void FixedUpdate ()
-	{
-		// The standard position of the camera is the relative position of the camera from the player.
-		Vector3 standardPos = player.position + relCameraPos;
-		
-		// The abovePos is directly above the player at the same distance as the standard position.
-		Vector3 abovePos = player.position + Vector3.up * relCameraPosMag;
-		
-		// An array of 5 points to check if the camera can see the player.
-		Vector3[] checkPoints = new Vector3[5];
-		
-		// The first is the standard position of the camera.
-		checkPoints[0] = standardPos;
-		
-		// The next three are 25%, 50% and 75% of the distance between the standard position and abovePos.
-		checkPoints[1] = Vector3.Lerp(standardPos, abovePos, 0.25f);
-		checkPoints[2] = Vector3.Lerp(standardPos, abovePos, 0.5f);
-		checkPoints[3] = Vector3.Lerp(standardPos, abovePos, 0.75f);
-		
-		// The last is the abovePos.
-		checkPoints[4] = abovePos;
-		
-		// Run through the check points...
-		for(int i = 0; i < checkPoints.Length; i++)
+		if(_camInstance == null)
 		{
-			// ... if the camera can see the player...
-			if(ViewingPosCheck(checkPoints[i]))
-				// ... break from the loop.
-				break;
+			_camInstance = this;
+			// Stops this object from being destroyed when loading scenes
+			DontDestroyOnLoad(_camInstance.gameObject);
 		}
-		
-		// Lerp the camera's position between it's current position and it's new position.
-		transform.position = Vector3.Lerp(transform.position, newPos, smooth * Time.deltaTime);
-		
-		// Make sure the camera is looking at the player.
-		SmoothLookAt();
+		else
+		{
+			//If a Singleton already exists and you find
+			//another reference in scene, destroy it!
+			if(this != _camInstance)
+				Destroy(this.gameObject);
+		}
+
+		// Setting up the reference for player
+		player = GameObject.FindGameObjectWithTag("Player").transform;
 	}
-	
-	
-	bool ViewingPosCheck (Vector3 checkPos)
+
+
+	// Run this when new level loaded
+	public void NewLevelStuff()
 	{
-		RaycastHit hit;
+		// Setting player's position to a specific position everytime camera is loaded (every scene)
+		// y axis is 5 so player doesn't get stuck in floor when downward force is applied
+		player.position = new Vector3(0, 5, 0);
 		
-		// If a raycast from the check position to the player hits something...
-		if(Physics.Raycast(checkPos, player.position - checkPos, out hit, relCameraPosMag))
-			// ... if it is not the player...
-			if(hit.transform != player)
-				// This position isn't appropriate.
-				return false;
+		// assigning reference to inventory script
+		inventoryRef = player.GetComponent<SimpleInventory>();
 		
-		// If we haven't hit anything or we've hit the player, this is an appropriate position.
-		newPos = checkPos;
-		return true;
+		StartCoroutine(SetEnv());
 	}
-	
-	
-	void SmoothLookAt ()
+
+	IEnumerator SetEnv()
 	{
-		// Create a vector from the camera towards the player.
-		Vector3 relPlayerPosition = player.position - transform.position;
-		
-		// Create a rotation based on the relative position of the player being the forward vector.
-		Quaternion lookAtRotation = Quaternion.LookRotation(relPlayerPosition, Vector3.up);
-		
-		// Lerp the camera's rotation between it's current rotation and the rotation that looks at the player.
-		transform.rotation = Quaternion.Lerp(transform.rotation, lookAtRotation, smooth * Time.deltaTime);
+		yield return new WaitForSeconds(0.5f);
+
+		// run inventory's set environment function every scene
+		// to reassign environment every level
+		inventoryRef.SetEnvironment();
 	}
 }

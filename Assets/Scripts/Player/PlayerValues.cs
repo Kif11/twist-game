@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
+
 // Young Chu
 // Script handling numerical values and booleans regarding player
 
@@ -24,7 +26,7 @@ public class PlayerValues : MonoBehaviour
 	public bool isTeleporting = false;
 
 	// Restart Button boolean
-	private bool restartPressed = false;		
+	private bool restartPressed = false;	
 
 
 	// Things to do when resetting/putting this component on something
@@ -53,6 +55,7 @@ public class PlayerValues : MonoBehaviour
 
 	void Start()
 	{
+		// assign Game Manager instance to ref var
 		gm = GameManager.GMinstance;
 	}
 
@@ -66,6 +69,8 @@ public class PlayerValues : MonoBehaviour
 		{
 			// call ReloadLevel function from GameManager component
 			gm.ReloadLevel();
+			// reset player position
+			this.transform.position = new Vector3(0, 5, 0);
 			// Run restart function to reset everything that should be resetted
 			LevelRestarted();
 		}
@@ -77,14 +82,15 @@ public class PlayerValues : MonoBehaviour
 		// resetting renderer back to visible
 		renderer.enabled = true;
 
+		// resetting speed back to normal
+		this.GetComponent<PlayerMovement>().speed = 6;
+
 		// resetting health
 		_health = 100;
 
 		// Resetting inventory
-		this.GetComponent<SimpleInventory>().rotL = 0;
-		this.GetComponent<SimpleInventory>().rotR = 0;
+		this.GetComponent<SimpleInventory>().ResetInventory();
 		this.GetComponent<SimpleInventory>().hkit = 0;
-		this.GetComponent<SimpleInventory>().gravRev = 0;
 	}
 
 	// A just in case for when this instance is actually called to make sure that there is something assigned to instance var

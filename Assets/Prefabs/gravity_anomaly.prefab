@@ -1,46 +1,47 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &120520
+--- !u!1 &149692
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 420520}
-  - 65: {fileID: 6520520}
-  - 114: {fileID: 11420520}
-  - 23: {fileID: 2320520}
-  - 198: {fileID: 19820520}
-  - 199: {fileID: 19920520}
+  - 4: {fileID: 449692}
+  - 33: {fileID: 3349692}
+  - 65: {fileID: 6549692}
+  - 114: {fileID: 11449692}
+  - 23: {fileID: 2349692}
+  - 199: {fileID: 19949692}
+  - 198: {fileID: 19849692}
   m_Layer: 2
-  m_Name: anomaly_reversed
+  m_Name: gravity_anomaly
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &420520
+--- !u!4 &449692
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 120520}
-  m_LocalRotation: {x: 0, y: 0, z: .707106829, w: .707106829}
-  m_LocalPosition: {x: -.370000005, y: 3.4000001, z: 0}
-  m_LocalScale: {x: 9.90116787, y: 8, z: 8}
+  m_GameObject: {fileID: 149692}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .0137500763, y: -.841875076, z: 0}
+  m_LocalScale: {x: 1, y: .5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!23 &2320520
+--- !u!23 &2349692
 Renderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 120520}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_GameObject: {fileID: 149692}
+  m_Enabled: 0
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
@@ -52,36 +53,43 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!65 &6520520
+--- !u!33 &3349692
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 149692}
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &6549692
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 120520}
+  m_GameObject: {fileID: 149692}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &11420520
+--- !u!114 &11449692
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 120520}
+  m_GameObject: {fileID: 149692}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0860f2f04e4a6d9459eee557bc116b88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anomalyType: 0
---- !u!198 &19820520
+  anomalyType: 1
+--- !u!198 &19849692
 ParticleSystem:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 120520}
+  m_GameObject: {fileID: 149692}
   lengthInSec: 5
   startDelay: 0
   speed: 1
@@ -93,7 +101,7 @@ ParticleSystem:
   InitialModule:
     enabled: 1
     startLifetime:
-      scalar: 2
+      scalar: 3
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -253,7 +261,7 @@ ParticleSystem:
         rgba: 4294551458
       minMaxState: 0
     startSize:
-      scalar: .100000001
+      scalar: .200000003
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -318,8 +326,8 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
       minMaxState: 0
-    gravityModifier: 0
-    inheritVelocity: 5
+    gravityModifier: .104999997
+    inheritVelocity: 0
     maxNumParticles: 2000
   ShapeModule:
     serializedVersion: 2
@@ -455,10 +463,10 @@ ParticleSystem:
       maxGradient:
         key0:
           serializedVersion: 2
-          rgba: 4294925551
+          rgba: 4294910240
         key1:
           serializedVersion: 2
-          rgba: 4294967295
+          rgba: 4294927437
         key2:
           serializedVersion: 2
           rgba: 0
@@ -1128,12 +1136,12 @@ ParticleSystem:
     subEmitterCollision1: {fileID: 0}
     subEmitterDeath: {fileID: 0}
     subEmitterDeath1: {fileID: 0}
---- !u!199 &19920520
+--- !u!199 &19949692
 ParticleSystemRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 120520}
+  m_GameObject: {fileID: 149692}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -1169,6 +1177,6 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 120520}
+  m_RootGameObject: {fileID: 149692}
   m_IsPrefabParent: 1
   m_IsExploded: 1

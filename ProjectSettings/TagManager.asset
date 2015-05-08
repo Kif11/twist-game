@@ -7,14 +7,18 @@ TagManager:
   - Enemy
   - Terrain
   - Bullet
-  - Collectable
-  - Health
-  - Quest
+  - Misc
+  - Notes
+  - 
   - GameUI
   - GameManager
   - DifficultyText
   - TimerText
   - HelpText
+  - HealthText
+  - 
+  - Health
+  - Quest
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX

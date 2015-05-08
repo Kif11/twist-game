@@ -13,7 +13,7 @@ GameObject:
   - 23: {fileID: 2309430}
   m_Layer: 0
   m_Name: env_wall_block
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
