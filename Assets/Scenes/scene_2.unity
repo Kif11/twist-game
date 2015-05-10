@@ -441,6 +441,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: 4
   speed: 10
+  rotateLeft: {fileID: 0}
+  rotateRight: {fileID: 0}
 --- !u!23 &207140447
 Renderer:
   m_ObjectHideFlags: 0
@@ -1888,6 +1890,14 @@ Prefab:
     - target: {fileID: 412898, guid: 95eff219c3d6b5b4daf9b7c06b62c2fc, type: 2}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11412898, guid: 95eff219c3d6b5b4daf9b7c06b62c2fc, type: 2}
+      propertyPath: rotateLeft
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 11412898, guid: 95eff219c3d6b5b4daf9b7c06b62c2fc, type: 2}
+      propertyPath: rotateRight
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 95eff219c3d6b5b4daf9b7c06b62c2fc, type: 2}
@@ -4789,6 +4799,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: 2
   speed: 50
+  rotateLeft: {fileID: 0}
+  rotateRight: {fileID: 0}
 --- !u!23 &1653554990
 Renderer:
   m_ObjectHideFlags: 0

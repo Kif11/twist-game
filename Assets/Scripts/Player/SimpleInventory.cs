@@ -73,8 +73,27 @@ public class SimpleInventory : MonoBehaviour
 	private string cantuse = "Unable to activate";
 
 
+    // UI Collectable Elements
+    private GameObject rotateLeft;
+    private GameObject rotateRight;
+    private GameObject reverse;
+
+    private Image rotateLeftImage;
+    private Image rotateRightImage;
+    private Image reverseImage;
+
 	void Start()
 	{
+
+        rotateLeft = GameObject.Find("RotateLeft");
+        rotateLeftImage = rotateLeft.GetComponent<Image>();
+
+        rotateRight = GameObject.Find("RotateRight");
+        rotateRightImage = rotateRight.GetComponent<Image>();
+
+        reverse = GameObject.Find("Reverse");
+        reverseImage = reverse.GetComponent<Image>();
+
 		// running function to find reference to Environment
 		SetEnvironment();
 
@@ -129,6 +148,8 @@ public class SimpleInventory : MonoBehaviour
 				environmentRef.CallRotate ();
 				// Taking away a use, use the get/set function to be extra defensive
 				rotL -= 1;
+
+                rotateLeftImage.enabled = !rotateLeftImage.enabled;
 			}
 			// otherwise (if !> 0 uses)
 			else if(_rotL <= 0)
@@ -150,6 +171,8 @@ public class SimpleInventory : MonoBehaviour
 				environmentRef.CallRotate();
 				// take away a use
 				rotR -= 1;
+
+                rotateRightImage.enabled = !rotateRightImage.enabled;
 			}
 			else if(_rotR <= 0)
 			{
@@ -172,6 +195,8 @@ public class SimpleInventory : MonoBehaviour
 					inverseGravity = true;
 					// take away a use
 					gravRev -= 1;
+
+                    reverseImage.enabled = !reverseImage.enabled;
 				}
 				else
 				{

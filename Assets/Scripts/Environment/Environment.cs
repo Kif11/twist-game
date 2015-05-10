@@ -28,6 +28,13 @@ public class Environment : MonoBehaviour
 
 	void Update () 
 	{
+
+        /*
+         * 
+         * NOTE(kirill): Since new inventory system has been implemented this
+         * functionality is disabled. One might use it for debuging
+         * level rotation
+         * 
 		// If key is pressed run and level is 
 		// not currently rotating run Rotate couroutine 
 		if(Input.GetButtonDown ("RotateLevelLeft") && !rotating)
@@ -40,6 +47,7 @@ public class Environment : MonoBehaviour
 			direction = Vector3.back;
 			StartCoroutine (Rotate(direction));
 		}
+        */
 
 		if(inverseGravity)
 		{

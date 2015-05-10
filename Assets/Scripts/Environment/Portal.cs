@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
+
 // Kirill Kovalevskiy
+// This script handles all portals logic
 
 public class Portal : MonoBehaviour {
 

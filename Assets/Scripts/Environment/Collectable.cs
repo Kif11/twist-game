@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
-// Kirill
+using UnityEngine.UI;
+
+// Kirill Kovalevskiy
 // Young - revamped it
 
 public class Collectable : MonoBehaviour {
@@ -21,17 +23,38 @@ public class Collectable : MonoBehaviour {
 	// camera reference
 	private CameraMove2 cam;
 
+    private GamePlay gp;
+
 	// rotate speed of collectibles
 	[SerializeField]
 	private float speed = 10f;
 
+    // UI Collectable Elements
+    private GameObject rotateLeft;
+    private GameObject rotateRight;
+    private GameObject reverse;
+
+    private Image rotateLeftImage;
+    private Image rotateRightImage;
+    private Image reverseImage;
+
 	void Start()
 	{
+        rotateLeft = GameObject.Find("RotateLeft");
+        rotateLeftImage = rotateLeft.GetComponent<Image>();
+
+        rotateRight = GameObject.Find("RotateRight");
+        rotateRightImage = rotateRight.GetComponent<Image>();
+
+        reverse = GameObject.Find("Reverse");
+        reverseImage = reverse.GetComponent<Image>();
+
 		gm = GameManager.GMinstance;
 		cam = CameraMove2.camInstance;
+        gp = GamePlay.gamePlayInstance;
 	}
 
-	void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
 	{
 		// Check if collectable collide with player
 		if (other.tag == "Player") 
@@ -50,16 +73,19 @@ public class Collectable : MonoBehaviour {
 			case itemType.rotL:
 				other.GetComponent<SimpleInventory>().rotL += 1;
 				Destroy (this.gameObject);
+                rotateLeftImage.enabled = !rotateLeftImage.enabled;
 				break;
 				// if item is rotate right
 			case itemType.rotR:
 				other.GetComponent<SimpleInventory>().rotR += 1;
-				Destroy (this.gameObject);
+                Destroy(this.gameObject);
+                rotateRightImage.enabled = !rotateRightImage.enabled;
 				break;
 				// if item is reverse gravity
 			case itemType.gravRev:
 				other.GetComponent <SimpleInventory>().gravRev += 1;
 				Destroy (this.gameObject);
+                reverseImage.enabled = !reverseImage.enabled;
 				break;
 				// if item was goal
 			case itemType.goal:
@@ -84,4 +110,5 @@ public class Collectable : MonoBehaviour {
 		// Rotating collectibles so it stands out more
 		transform.Rotate(new Vector3(30, 60, 90), speed * Time.deltaTime);
 	}
+
 }

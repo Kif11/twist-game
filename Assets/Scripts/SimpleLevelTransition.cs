@@ -47,6 +47,9 @@ public class SimpleLevelTransition : MonoBehaviour {
 			// just make sure scene files names are changed accordingly as well
 			// the variable is declared in the function because we don't want to store
 			// the basic naming format, otherwise we'll end up having scene = "level_012", "level_0123", etc.
+
+            // NOTE(kirill): I would use string formating instead
+            // https://msdn.microsoft.com/en-us/library/system.string.format%28v=vs.110%29.aspx
 			string scene = "level_0";
 
 			// Add to current scene value
@@ -88,6 +91,9 @@ public class SimpleLevelTransition : MonoBehaviour {
 		Debug.Log ("loaded " + scene);
 
 	}
+
+/*
+ * TODO(kirill): Marked for deletion in next revision
 // ================================================
 	// or this
 	// I have no idea why you would use this one instead of the first one
@@ -107,7 +113,7 @@ public class SimpleLevelTransition : MonoBehaviour {
 	{
 		Application.LoadLevel(name);
 	}
-
+*/
 
 
 

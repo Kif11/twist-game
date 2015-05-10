@@ -26,7 +26,16 @@ public class PlayerValues : MonoBehaviour
 	public bool isTeleporting = false;
 
 	// Restart Button boolean
-	private bool restartPressed = false;	
+    private bool restartPressed = false;
+
+    // UI Collectable Elements
+    private GameObject rotateLeft;
+    private GameObject rotateRight;
+    private GameObject reverse;
+
+    private Image rotateLeftImage;
+    private Image rotateRightImage;
+    private Image reverseImage;
 
 
 	// Things to do when resetting/putting this component on something
@@ -55,6 +64,16 @@ public class PlayerValues : MonoBehaviour
 
 	void Start()
 	{
+
+        rotateLeft = GameObject.Find("RotateLeft");
+        rotateLeftImage = rotateLeft.GetComponent<Image>();
+
+        rotateRight = GameObject.Find("RotateRight");
+        rotateRightImage = rotateRight.GetComponent<Image>();
+
+        reverse = GameObject.Find("Reverse");
+        reverseImage = reverse.GetComponent<Image>();
+
 		// assign Game Manager instance to ref var
 		gm = GameManager.GMinstance;
 	}
@@ -91,6 +110,12 @@ public class PlayerValues : MonoBehaviour
 		// Resetting inventory
 		this.GetComponent<SimpleInventory>().ResetInventory();
 		this.GetComponent<SimpleInventory>().hkit = 0;
+
+        // Reset UI Icons
+        rotateLeftImage.enabled = false;
+        rotateRightImage.enabled = false;
+        reverseImage.enabled = false;
+
 	}
 
 	// A just in case for when this instance is actually called to make sure that there is something assigned to instance var

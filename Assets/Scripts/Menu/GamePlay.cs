@@ -2,11 +2,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
+
 // Kirill Kovalevskiy
 // Young Chu
 // UI
 
 public class GamePlay : MonoBehaviour {
+
+    private static GamePlay _gamePlayInstance;
 
 	GameObject gameManagerObject;
 	GameObject difLevelTextObject;
@@ -34,6 +37,26 @@ public class GamePlay : MonoBehaviour {
 	// Create a list for help messages
 	private string[] helpMsgs = new string[11];
 
+    // Text UI to give notifications
+    private GameObject noteObj;
+    private Text noteText;
+
+
+
+
+    public static GamePlay gamePlayInstance
+    {
+        get
+        {
+            if (_gamePlayInstance == null)
+            {
+                _gamePlayInstance = GameObject.FindObjectOfType<GamePlay>();
+            }
+
+            return _gamePlayInstance;
+        }
+    }
+
 
 	// Use this for initialization
 	void Start () 
@@ -46,11 +69,6 @@ public class GamePlay : MonoBehaviour {
 
 		gameManagerObject = GameObject.FindGameObjectWithTag("GameManager");
  		gameManager = gameManagerObject.GetComponent<GameManager>();
-
-		// set for removal
-		difLevelTextObject = GameObject.FindGameObjectWithTag("DifficultyText");
-		difText = difLevelTextObject.GetComponent<Text>();
-		difText.text = "Difficulty: " + gameManager.difficultyLevel;
 		
 		timerObject = GameObject.FindGameObjectWithTag("TimerText");
 		timerText = timerObject.GetComponent<Text>();
@@ -64,6 +82,10 @@ public class GamePlay : MonoBehaviour {
 
 		miscObj = GameObject.FindGameObjectWithTag("Misc");
 		miscText = miscObj.GetComponent<Text>();
+
+        // Assigning note vars
+        noteObj = GameObject.FindGameObjectWithTag("Notes");
+        noteText = noteObj.GetComponent<Text>();
 
 
 		// ALl messages
@@ -153,5 +175,13 @@ public class GamePlay : MonoBehaviour {
 		}
 	}
 
+    public IEnumerator DisplayNote(string msg)
+    {
+        noteText.text = msg;
+
+        yield return new WaitForSeconds(1f);
+
+        noteText.text = " ";
+    }
 
 }

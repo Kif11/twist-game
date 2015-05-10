@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
+
 // Kirill Kovalevskiy
+// Control behaviour of different gravitational anomalies types 
 
 public class GravityAnomaly : MonoBehaviour {
 
@@ -23,6 +25,7 @@ public class GravityAnomaly : MonoBehaviour {
 			
 			Rigidbody rb = player.GetComponent<Rigidbody>();
 			
+            // Depending on setting switch to different anomaly
 			switch (anomalyType)
 			{
 			case AnomalyType.Reverse:
@@ -48,6 +51,7 @@ public class GravityAnomaly : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other)
 	{	
+        // Player entering anomaly
 		if (other.tag == "Player")
 		{	
 			player = other;
