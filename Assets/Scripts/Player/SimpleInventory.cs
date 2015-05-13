@@ -56,6 +56,7 @@ public class SimpleInventory : MonoBehaviour
 	/// Environment component reference
 	/// Environment tagged object is the parent of all things in the level when they rotate
 	/// </summary>
+	[SerializeField]
 	private Environment environmentRef;
 
 	/// <summary>
@@ -107,6 +108,7 @@ public class SimpleInventory : MonoBehaviour
 
 
 	// Have this function run whenever new scene is loaded, so it'll get new Environment
+	// Doesn't seem to work when restarting level for some reason...
 	public void SetEnvironment()
 	{
 		// Find object tagged Environment and gets component 'Environment' component and assigns to var
@@ -139,6 +141,7 @@ public class SimpleInventory : MonoBehaviour
 		// If oneP is pressed and environment isnt already rotating
 		if(oneP && !environmentRef.rotating)
 		{
+			SetEnvironment();
 			// and if Rotate Left uses is more than 0
 			if(_rotL > 0)
 			{
@@ -148,8 +151,6 @@ public class SimpleInventory : MonoBehaviour
 				environmentRef.CallRotate ();
 				// Taking away a use, use the get/set function to be extra defensive
 				rotL -= 1;
-
-                rotateLeftImage.enabled = !rotateLeftImage.enabled;
 			}
 			// otherwise (if !> 0 uses)
 			else if(_rotL <= 0)
@@ -163,6 +164,7 @@ public class SimpleInventory : MonoBehaviour
 		}
 		if(twoP && !environmentRef.rotating)
 		{
+			SetEnvironment();
 			if(_rotR > 0)
 			{
 				// set rotate direction
@@ -171,8 +173,6 @@ public class SimpleInventory : MonoBehaviour
 				environmentRef.CallRotate();
 				// take away a use
 				rotR -= 1;
-
-                rotateRightImage.enabled = !rotateRightImage.enabled;
 			}
 			else if(_rotR <= 0)
 			{
@@ -195,8 +195,6 @@ public class SimpleInventory : MonoBehaviour
 					inverseGravity = true;
 					// take away a use
 					gravRev -= 1;
-
-                    reverseImage.enabled = !reverseImage.enabled;
 				}
 				else
 				{
@@ -208,6 +206,12 @@ public class SimpleInventory : MonoBehaviour
 			{
 				// set it to false
 				inverseGravity = false;
+				// and if amount of gravity reversals is less than 0
+				if(_gravRev <= 0)
+				{
+					// turn off picture
+					reverseImage.enabled = false;
+				}
 			}
 
 		}
@@ -274,11 +278,19 @@ public class SimpleInventory : MonoBehaviour
 		{
 			// setting the value, for when wanting to take away/give that doesnt follow conventional use (Update)
 			_rotL = value;
-			// if amount is less than 0, negatives, just in case
-			if(_rotL < 0)
+			// if amount is less than or equal 0
+			if(_rotL <= 0)
 			{
 				// make it 0 instead
 				_rotL = 0;
+				// make sure image is disabled
+				rotateLeftImage.enabled = false;
+			}
+			// if amount is more than 0
+			if(_rotL > 0)
+			{
+				// make sure picture is showing
+				rotateLeftImage.enabled = true;
 			}
 		}
 	}
@@ -292,9 +304,14 @@ public class SimpleInventory : MonoBehaviour
 		set
 		{
 			_rotR = value;
-			if(_rotR < 0)
+			if(_rotR <= 0)
 			{
 				_rotR = 0;
+				rotateRightImage.enabled = false;
+			}
+			if(_rotR > 0)
+			{
+				rotateRightImage.enabled = true;
 			}
 		}
 	}
@@ -308,9 +325,15 @@ public class SimpleInventory : MonoBehaviour
 		set
 		{
 			_gravRev = value;
+			// reverse gravity doesn't immediately turn off icon when at 0,
+			// so it can still show the effect is still active
 			if(_gravRev < 0)
 			{
 				_gravRev = 0;
+			}
+			if(_gravRev > 0)
+			{
+				reverseImage.enabled = true;
 			}
 		}
 	}

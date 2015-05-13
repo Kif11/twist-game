@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
 	// Number of last scene in game, last scene should be game over scene
 	[SerializeField]
 	[Tooltip("Number of final scene")]
-	private int _lastScene = 8;
+	private int _lastScene = 7;
 
 	// stores difficulty level
 	public int difficultyLevel = 1;
@@ -150,6 +150,7 @@ public class GameManager : MonoBehaviour
 
 			// Show end game menu
 			EnableState("End");
+
 		}
 		else
 		{

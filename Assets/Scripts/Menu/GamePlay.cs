@@ -57,6 +57,22 @@ public class GamePlay : MonoBehaviour {
         }
     }
 
+	void Awake()
+	{
+		if(_gamePlayInstance == null)
+		{
+			_gamePlayInstance = this;
+			// Stops this object from being destroyed when loading scenes
+			DontDestroyOnLoad(_gamePlayInstance.gameObject);
+		}
+		else
+		{
+			//If a Singleton already exists and you find
+			//another reference in scene, destroy it!
+			if(this != _gamePlayInstance)
+				Destroy(this.gameObject);
+		}
+	}
 
 	// Use this for initialization
 	void Start () 

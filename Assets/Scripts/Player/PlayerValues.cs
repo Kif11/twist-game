@@ -92,6 +92,8 @@ public class PlayerValues : MonoBehaviour
 			this.transform.position = new Vector3(0, 5, 0);
 			// Run restart function to reset everything that should be resetted
 			LevelRestarted();
+			// SetEnvironment function doesn't run when put in either here or LevelRestarted() for some reason
+			// Used makeshift solution in SimpleInventory
 		}
 	}
 

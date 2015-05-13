@@ -73,19 +73,16 @@ public class Collectable : MonoBehaviour {
 			case itemType.rotL:
 				other.GetComponent<SimpleInventory>().rotL += 1;
 				Destroy (this.gameObject);
-                rotateLeftImage.enabled = !rotateLeftImage.enabled;
 				break;
 				// if item is rotate right
 			case itemType.rotR:
 				other.GetComponent<SimpleInventory>().rotR += 1;
                 Destroy(this.gameObject);
-                rotateRightImage.enabled = !rotateRightImage.enabled;
 				break;
 				// if item is reverse gravity
 			case itemType.gravRev:
 				other.GetComponent <SimpleInventory>().gravRev += 1;
 				Destroy (this.gameObject);
-                reverseImage.enabled = !reverseImage.enabled;
 				break;
 				// if item was goal
 			case itemType.goal:
