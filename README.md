@@ -1,4 +1,4 @@
-![twist_demo_01](https://cloud.githubusercontent.com/assets/8003487/12344014/cfef707c-baed-11e5-9608-9225635fd8f9.gif)
+![twist_demo_01](https://cloud.githubusercontent.com/assets/8003487/12344133/cd605e2e-baee-11e5-9c59-d46b87487993.gif)
 
 #Description 
 >**“The world doesn’t revolve around you,”**
