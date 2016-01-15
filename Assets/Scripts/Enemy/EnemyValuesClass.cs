@@ -14,7 +14,7 @@ public class EnemyValuesClass : MonoBehaviour
 		// subtract damage from health
 		_enemyHealth -= damage;
 		// run color change coroutine to show got hit
-		StartCoroutine(ColorChange(this.gameObject, this.renderer.material.color, Color.red, .2f)); 
+		StartCoroutine(ColorChange(this.gameObject, this.GetComponent<Renderer>().material.color, Color.red, .2f)); 
 
 		// check health values
 		if(_enemyHealth <= 0)
@@ -27,8 +27,8 @@ public class EnemyValuesClass : MonoBehaviour
 	// overridable basic enemy color change to show enemy was hit
 	public virtual IEnumerator ColorChange(GameObject thisThing, Color oldColor, Color newColor, float length)
 	{
-		thisThing.renderer.material.color = newColor; 
+		thisThing.GetComponent<Renderer>().material.color = newColor; 
 		yield return new WaitForSeconds(length); 
-		thisThing.renderer.material.color = oldColor; 
+		thisThing.GetComponent<Renderer>().material.color = oldColor; 
 	}
 }

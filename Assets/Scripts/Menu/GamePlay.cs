@@ -131,7 +131,7 @@ public class GamePlay : MonoBehaviour {
 		// Setting time display as long as game hasn't ended
 		if(end != true)
 		{
-			timerText.text = "Time: " + Time.time;
+			timerText.text = "Time: " + Mathf.Round(Time.time);
 		}
 
 		// setting health display

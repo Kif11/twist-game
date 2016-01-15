@@ -18,7 +18,7 @@ public class Tier2EnemyValues : EnemyValuesClass
 		_enemyHealth -= damage;
 
 		// change new color parameter when appropiate (ie, enemy current color is red)
-		StartCoroutine(ColorChange(this.gameObject, this.renderer.material.color, Color.red, .2f)); 
+		StartCoroutine(ColorChange(this.gameObject, this.GetComponent<Renderer>().material.color, Color.red, .2f)); 
 		if(_enemyHealth <= 0)
 		{
 			// spawn something
@@ -29,9 +29,9 @@ public class Tier2EnemyValues : EnemyValuesClass
 	// Change what happens during color change coroutine
 	public override IEnumerator ColorChange(GameObject thisThing, Color oldColor, Color newColor, float length)
 	{
-		thisThing.renderer.material.color = newColor; 
+		thisThing.GetComponent<Renderer>().material.color = newColor; 
 		yield return new WaitForSeconds(length); 
-		thisThing.renderer.material.color = oldColor; 
+		thisThing.GetComponent<Renderer>().material.color = oldColor; 
 	}
 
 }

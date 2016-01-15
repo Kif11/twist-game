@@ -6,7 +6,7 @@ using System.Collections;
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerMovement : MonoBehaviour {
 
-	public float speed = 6f;            // The speed that the player will move at.
+	public float speed = 20f;            // The speed that the player will move at.
 	
 	private Vector3 movement;                   // The vector to store the direction of the player's movement.
 	private Rigidbody playerRigidbody;          // Reference to the player's rigidbody.

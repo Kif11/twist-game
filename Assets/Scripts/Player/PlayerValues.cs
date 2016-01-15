@@ -101,7 +101,7 @@ public class PlayerValues : MonoBehaviour
 	public void LevelRestarted()
 	{
 		// resetting renderer back to visible
-		renderer.enabled = true;
+		GetComponent<Renderer>().enabled = true;
 
 		// resetting speed back to normal
 		this.GetComponent<PlayerMovement>().speed = 6;
@@ -156,7 +156,7 @@ public class PlayerValues : MonoBehaviour
 				// calls on player's movement speed to 0, so cant move
 				this.GetComponent<PlayerMovement>().speed = 0;
 				// turn off renderer
-				renderer.enabled = false;
+				GetComponent<Renderer>().enabled = false;
 			}
 			// checking if current health value exceeds max health value
 			if(_health >= _maxHealth)
