@@ -6,10 +6,6 @@ Well, in Game Twist, it actually does! Game Title is a 2.5D action puzzler where
 ##List of Mechanics/Features
 - Rotating levels around the player
 - 2.5D gameplay and levels
-- Maybe split level layouts into 2 zones [front & back]
-- Have camera switch/rotate around player to other side of level whenever player enters different zone
-- Swapping between multiple weapons at any time
-- Taking extra damage from attacks while possessing no armor
 
 ##Asset List
 ###Player Classes
