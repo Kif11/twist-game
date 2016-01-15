@@ -1,9 +1,9 @@
-![test](https://cloud.githubusercontent.com/assets/8003487/12342766/9ad67328-bae2-11e5-9c8b-75efa53ce94c.gif)
+# Twist Game
+>**“The world doesn’t revolve around you”**
 
-#Description 
->**“The world doesn’t revolve around you,”**
+Well, in Game Twist, it actually does! Game Title is a 2.5D action puzzler where the player progresses through the game by rotating entire levels around their self.
 
-Well, in Game Twist, it actually does! Game Title is a 2.5D action puzzler where the player progresses through the game by rotating entire levels around their self while they fight enemies with a variety of weapons, using the depth of the level to their advantage.
+![twist_demo_01](https://cloud.githubusercontent.com/assets/8003487/12344133/cd605e2e-baee-11e5-9c59-d46b87487993.gif)
 
 ##List of Mechanics/Features
 - Rotating levels around the player
