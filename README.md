@@ -1,5 +1,5 @@
 # Twist Game
->**“The world doesn’t revolve around you,”**
+>**“The world doesn’t revolve around you”**
 
 Well, in Game Twist, it actually does! Game Title is a 2.5D action puzzler where the player progresses through the game by rotating entire levels around their self.
 
